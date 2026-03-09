@@ -45,3 +45,4 @@ The objective is to identify patterns in ad exposure, user frustration, uninstal
 ---
 
 ## 📎 Author
+Krishnan S.
