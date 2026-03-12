@@ -1,0 +1,13 @@
+pandas
+numpy
+matplotlib
+seaborn
+nltk
+textblob
+requests
+beautifulsoup4
+lxml
+wordcloud
+google-play-scraper
+tqdm
+jupyter
