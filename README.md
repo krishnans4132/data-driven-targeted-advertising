@@ -17,6 +17,7 @@ The objective is to identify patterns in ad exposure, user frustration, uninstal
 - Target responses: 1000
 - Structured, anonymous responses
 - Mostly closed-ended questions for quantitative analysis
+- form link: https://forms.gle/xwqqxnVzqaRNMo6Q9
 
 ## 🛠 Tools Used
 - Python (Pandas, NumPy)
