@@ -74,7 +74,7 @@ export default function OverviewPage() {
           <StatCard title="Total Responses" value={data.length} icon={<Users size={20} />} variant="primary" />
           <StatCard title="Avg Fatigue Index" value={avgFatigue} subtitle="out of 5.0" icon={<TrendingUp size={20} />} variant="accent" />
           <StatCard title="Would Pay Ad-Free" value={`${Math.round((payForAdFree / data.length) * 100)}%`} subtitle={`${payForAdFree} users`} icon={<Smartphone size={20} />} variant="warm" />
-          <StatCard title="High Frustration" value={`${Math.round((frustrationHigh / data.length) * 100)}%`} subtitle={`${frustrationHigh} users`} icon={<Frown size={20} />} />
+          <StatCard title="High Frustration" value={`${Math.round((frustrationHigh / data.length) * 100)}%`} subtitle={`${frustrationHigh} users`} icon={<Frown size={20} />} variant="warm" />
         </div>
       </AnimatedSection>
 

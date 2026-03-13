@@ -1,4 +1,4 @@
-import { BarChart3, Users, Megaphone, Smartphone, Lightbulb } from "lucide-react";
+import { BarChart3, Users, Megaphone, Smartphone, Lightbulb, Brain } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -19,6 +19,7 @@ const sections = [
   { title: "Ad Analysis", url: "/ad-analysis", icon: Megaphone },
   { title: "User Behavior", url: "/behavior", icon: Smartphone },
   { title: "Business Insights", url: "/insights", icon: Lightbulb },
+  { title: "ML Insights", url: "/ml-insights", icon: Brain },
 ];
 
 export function AppSidebar() {

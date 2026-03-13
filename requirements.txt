@@ -11,3 +11,4 @@ wordcloud
 google-play-scraper
 tqdm
 jupyter
+ 

@@ -9,6 +9,7 @@ import DemographicsPage from "@/pages/DemographicsPage";
 import AdAnalysisPage from "@/pages/AdAnalysisPage";
 import BehaviorPage from "@/pages/BehaviorPage";
 import InsightsPage from "@/pages/InsightsPage";
+import MLInsightsPage from "@/pages/MLInsightsPage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/ad-analysis" element={<AdAnalysisPage />} />
             <Route path="/behavior" element={<BehaviorPage />} />
             <Route path="/insights" element={<InsightsPage />} />
+            <Route path="/ml-insights" element={<MLInsightsPage />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
