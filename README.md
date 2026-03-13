@@ -182,4 +182,5 @@ dashboard/
 ## 📎 Author
 
 **Krishnan S.**  
+**Rachit Anand**  
 Business Analytics Project
