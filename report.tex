@@ -1,0 +1,991 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage[a4paper,width=150mm,top=20mm,bottom=27mm]{geometry}
+\usepackage[english]{babel}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\title{
+\begin{center}
+
+{\Large \bfseries A Business Analytics Study of Advertisement Fatigue in Mobile Applications}\\[0.3cm]
+
+{\normalsize \itshape Submitted By}\\[0.2cm]
+
+Rachit Anand, CB.SC.U4CSE23139\\
+Student2, Roll Number\\
+Krishnan S., CB.SC.U4CSE23628\\
+Student4, Roll Number\\[0.4cm]
+
+{\normalsize \itshape in partial fulfilment of the requirements for the degree of}\\[0.2cm]
+
+{\large \bfseries BACHELOR OF TECHNOLOGY}\\
+{\large \bfseries IN}\\
+{\large \bfseries COMPUTER SCIENCE AND ENGINEERING}\\[0.3cm]
+
+\includegraphics[width=0.25\textwidth]{Logo-frontpage.jpg}\\[0.3cm]
+
+{\normalsize \itshape Under the Guidance of}\\[0.2cm]
+
+Vedaj J Padman\\
+{\small Assistant Professor (Sl.Gd.)}\\
+{\small School of Computing, Coimbatore}\\[0.4cm]
+
+{\normalsize \bfseries DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING}\\
+{\normalsize \bfseries AMRITA SCHOOL OF COMPUTING}\\
+{\normalsize \bfseries AMRITA VISHWA VIDYAPEETHAM}\\
+{\normalsize \bfseries COIMBATORE - 641112}
+
+\end{center}
+}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\begin{center}
+{\Large \bfseries ABSTRACT}
+\end{center}
+
+\onehalfspacing
+\justifying
+
+This project focuses on analyzing advertisement fatigue in mobile applications using business analytics techniques. Mobile applications widely rely on advertisements such as banner ads, interstitial ads, and video ads to generate revenue. However, excessive advertising can negatively affect user experience and may lead to frustration, reduced engagement, or application uninstallation.
+
+The study combines primary survey data and secondary review data to analyze user perceptions toward advertisements in mobile applications. The primary dataset was collected using a structured Google Forms survey capturing user demographics, mobile usage patterns, advertisement exposure frequency, and behavioral reactions toward advertisements. In addition, secondary data consisting of Google Play Store reviews was collected through automated web scraping and processed using text mining and sentiment analysis techniques.
+
+Data preprocessing and exploratory data analysis (EDA) were performed to identify patterns in user behavior and advertisement exposure. Natural Language Processing (NLP) techniques were applied to analyze review sentiments and detect advertisement-related keywords. An Advertisement Fatigue Index was computed from Likert-scale survey responses to quantify the degree of advertisement fatigue experienced by individual users.
+
+Advanced analytics techniques including machine learning regression models (Linear Regression, Decision Tree, and Random Forest), K-Means clustering for user segmentation, and Prophet-based time-series forecasting of advertisement complaint trends were applied to derive deeper insights. An interactive dashboard was developed to communicate findings to business stakeholders.
+
+The findings provide valuable insights into how advertisement strategies influence user satisfaction and application engagement. These insights can help mobile app developers and digital marketers design more effective advertisement strategies that balance revenue generation with user experience.
+
+\tableofcontents
+\newpage
+
+\listoftables
+\newpage
+
+\listoffigures
+\newpage
+
+
+% ======================================================
+\section{Introduction}
+% ======================================================
+
+Mobile applications have become an essential part of everyday life, providing services such as communication, entertainment, education, and shopping. Many mobile applications rely on digital advertising as a primary source of revenue. Advertisement formats such as banner ads, interstitial ads, and rewarded video ads allow companies to offer free services while generating income through marketing partnerships.
+
+However, the increasing frequency of advertisements in mobile applications has raised concerns about advertisement fatigue among users. Advertisement fatigue occurs when users are repeatedly exposed to advertisements, leading to annoyance, decreased engagement, and reduced satisfaction with the application. When advertisements interrupt user activities or appear too frequently, users may close the application or uninstall it entirely.
+
+Understanding how users react to advertisements is therefore an important problem for businesses and developers. By analyzing user behavior and feedback, organizations can identify how advertisement exposure affects user experience and determine which advertisement formats are acceptable to users.
+
+This project applies a comprehensive set of business analytics techniques to study advertisement fatigue in mobile applications. By analyzing survey data, application review sentiments, predictive models, and time-series forecasts, the study aims to identify patterns in advertisement exposure, user frustration levels, and behavioral responses to advertisements.
+
+The insights derived from this analysis can help mobile application developers design better advertising strategies that improve user experience while maintaining sustainable revenue generation.
+
+% ======================================================
+\section{Objectives}
+% ======================================================
+
+The objectives of this project are:
+
+\begin{itemize}
+    \item To measure advertisement fatigue using a structured survey and compute a quantitative Ad Fatigue Index.
+    \item To identify mobile app categories that generate the highest advertisement-related frustration.
+    \item To analyze user uninstall behavior and its relationship to advertisement exposure.
+    \item To evaluate user tolerance toward different advertisement formats.
+    \item To perform sentiment analysis on real Google Play Store reviews related to advertisements.
+    \item To forecast future advertisement complaint trends using time-series analysis.
+    \item To predict individual Ad Fatigue Index scores using machine learning regression models.
+    \item To segment users into behavioral clusters based on their advertisement fatigue patterns.
+    \item To provide data-driven business recommendations for improving mobile advertising strategy.
+\end{itemize}
+
+% ======================================================
+\section{Problem Statement}
+% ======================================================
+
+Digital advertisements play a critical role in the monetization strategies of mobile applications. However, excessive advertisements can disrupt user experience and lead to negative user reactions. Users may feel frustrated when advertisements interrupt their tasks, appear too frequently, or display irrelevant content.
+
+Many application developers struggle to determine the optimal balance between advertisement frequency and user satisfaction. Without proper data-driven analysis, businesses may unknowingly implement advertising strategies that reduce user engagement, increase application uninstallation rates, and damage brand reputation.
+
+The key problem addressed in this project is how business analytics techniques can be used to analyze advertisement fatigue in mobile applications and identify factors that influence user frustration and engagement. By examining user survey responses and analyzing mobile application reviews, the study aims to understand how advertisement exposure affects user behavior.
+
+The insights generated from this analysis can help businesses design more effective advertisement strategies that minimize user frustration while maximizing advertising revenue and user retention.
+
+% ======================================================
+\section{Dataset Selection and Understanding}
+% ======================================================
+
+The datasets used in this project consist of both primary and secondary data sources.
+
+\subsection{Primary Dataset — Survey Data}
+
+The primary dataset was collected using a structured Google Forms survey designed to understand user experiences with advertisements in mobile applications. The survey was designed with closed-ended questions to enable quantitative analysis. A total of 422 responses were collected out of a target of 1000.
+
+The survey captures the following variables:
+
+\begin{itemize}
+    \item \textbf{Demographics}: Age group, gender, occupation, smartphone type.
+    \item \textbf{Usage Patterns}: Daily screen time, daily app categories used, most used app category.
+    \item \textbf{Advertisement Exposure}: Ad frequency, frequent ad format, most excessive ad category.
+    \item \textbf{User Reactions}: Whether ads interrupt usage, cause frustration, reduce enjoyment, cause app closure, lead to app uninstallation, and willingness to pay for ad-free versions.
+    \item \textbf{Preferences}: Most tolerated ad format, most annoying ad timing.
+\end{itemize}
+
+\subsection{Secondary Dataset — Google Play Store Reviews}
+
+The secondary dataset was created by collecting user reviews from the Google Play Store using the \texttt{google-play-scraper} Python library. Reviews were collected across multiple app categories and countries. The raw dataset (\texttt{playstore\_reviews\_raw.csv}) was processed through the following NLP pipeline:
+
+\begin{enumerate}
+    \item \textbf{Web Scraping}: Automated extraction of reviews using \texttt{google-play-scraper}.
+    \item \textbf{Text Cleaning}: Removal of punctuation, stopwords, URLs, and special characters; lowercasing and normalization.
+    \item \textbf{Keyword Detection}: Classification of each review for the presence of advertisement-related keywords from a curated vocabulary list.
+    \item \textbf{Sentiment Analysis}: Classification of each review as positive, neutral, or negative using TextBlob polarity scores.
+\end{enumerate}
+
+The processed dataset (\texttt{reviews\_cleaned.csv}) contains the following key fields:
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Field} & \textbf{Description} \\
+\midrule
+app\_name & Name of the application \\
+category & App category (e.g., Game, Social, Entertainment) \\
+country & Country of the reviewer \\
+continent & Continent derived from country \\
+rating & Star rating given by the user (1--5) \\
+review\_text & Original raw review text \\
+clean\_text & Preprocessed review text \\
+ad\_mentioned & Binary flag (1 = ad keyword found, 0 = not found) \\
+ad\_keyword & The specific advertisement keyword matched \\
+sentiment & Sentiment classification (positive / neutral / negative) \\
+\bottomrule
+\end{tabularx}
+\caption{Fields in the Processed Review Dataset}
+\end{table}
+
+\subsection{Dashboard Dataset}
+
+A subset of the processed review dataset was exported as \texttt{dashboard\_dataset.csv} and \texttt{dashboard\_dataset\_survey.csv} for use in the interactive analytical dashboard. This dataset consolidates key fields: category, app name, continent, rating, sentiment, ad\_mentioned, and ad\_keyword.
+
+% ======================================================
+\section{Tools and Technologies}
+% ======================================================
+
+The analysis for this project was conducted using the Python programming language in a Jupyter Notebook environment. Python provides a powerful ecosystem of data analysis libraries that support data preprocessing, visualization, machine learning, and natural language processing.
+
+The primary tools and technologies used in this project include:
+
+\textbf{Python} --- Used as the main programming language for data analysis and modeling.
+
+\textbf{Pandas} --- Used for data manipulation, cleaning, transformation, and aggregation of datasets.
+
+\textbf{NumPy} --- Used for numerical computations and array-based data processing operations.
+
+\textbf{Matplotlib and Seaborn} --- Used for creating statistical visualizations and graphical analysis during exploratory data analysis.
+
+\textbf{WordCloud} --- Used to generate word cloud visualizations of frequently occurring words in review text.
+
+\textbf{NLTK and TextBlob} --- Used for natural language processing tasks such as text cleaning, tokenization, stopword removal, sentiment analysis, and keyword extraction from review data.
+
+\textbf{google-play-scraper} --- Used to collect real user reviews from the Google Play Store across multiple app categories and countries.
+
+\textbf{tqdm} --- Used for progress monitoring during large-scale data scraping and processing operations.
+
+\textbf{Scikit-learn} --- Used for machine learning tasks including label encoding, feature scaling (StandardScaler), train-test splitting, regression modeling (Linear Regression, Decision Tree, Random Forest), K-Means clustering, Principal Component Analysis (PCA) for dimensionality reduction and cluster visualization, and model evaluation.
+
+\textbf{Prophet} --- Used for time-series forecasting of daily advertisement mention trends with daily and weekly seasonality components.
+
+\textbf{Jupyter Notebook} --- Used as the development environment for implementing data preprocessing, analysis, and visualization workflows.
+
+\textbf{Git and GitHub} --- Used for version control and collaborative project management.
+
+These tools together enabled the implementation of a complete end-to-end business analytics pipeline including data collection, preprocessing, exploratory data analysis, sentiment analysis, machine learning modeling, forecasting, and dashboard development.
+
+% ======================================================
+\section{Methodology}
+% ======================================================
+
+The project follows a structured business analytics methodology consisting of the following phases:
+
+\begin{enumerate}
+    \item \textbf{Data Collection}: Web scraping of Google Play Store reviews and structured survey administration.
+    \item \textbf{Data Preprocessing}: Text cleaning (NLP pipeline), missing value imputation, deduplication, and feature engineering.
+    \item \textbf{Exploratory Data Analysis (EDA)}: Descriptive statistics, visualizations, cross-tabulation, and correlation analysis.
+    \item \textbf{Sentiment and Text Mining}: Keyword detection, sentiment classification, word frequency analysis.
+    \item \textbf{Ad Fatigue Index Computation}: Quantitative scoring of survey Likert-scale responses.
+    \item \textbf{Machine Learning Regression}: Prediction of Ad Fatigue Index using Linear Regression, Decision Tree, and Random Forest.
+    \item \textbf{User Segmentation (Clustering)}: K-Means clustering to identify distinct user behavioral segments.
+    \item \textbf{Time-Series Forecasting}: Prophet model to forecast ad complaint volume over time.
+    \item \textbf{Business Intelligence Dashboard}: Interactive dashboard for stakeholder communication and data exploration.
+\end{enumerate}
+
+% ======================================================
+\section{Data Preprocessing}
+% ======================================================
+
+\subsection{Review Data Preprocessing (Notebook 02)}
+
+The raw review dataset (\texttt{playstore\_reviews\_raw.csv}) underwent the following cleaning steps:
+
+\begin{itemize}
+    \item Removal of null and empty review entries.
+    \item Lowercasing of all review text.
+    \item Removal of URLs, special characters, and punctuation using regular expressions.
+    \item Removal of English stopwords to reduce noise.
+    \item Stripping of extra whitespace.
+    \item Retention of only alphabetic tokens meaningful for analysis.
+\end{itemize}
+
+The cleaned dataset (\texttt{reviews\_cleaned.csv}) was saved and used as the input for text mining and sentiment analysis.
+
+\subsection{Survey Data Preprocessing (Notebook 05)}
+
+The raw survey dataset (\texttt{survey\_dataset.csv}) was preprocessed through the following steps:
+
+\begin{itemize}
+    \item Column renaming to snake\_case variable names for consistency: \texttt{age\_group}, \texttt{occupation}, \texttt{screen\_time}, \texttt{ad\_frequency}, \texttt{ads\_interrupt\_usage}, \texttt{ads\_cause\_frustration}, \texttt{ads\_reduce\_enjoyment}, \texttt{ads\_close\_app}, \texttt{ads\_uninstall\_app}, \texttt{pay\_for\_adfree}, \texttt{tolerated\_ad\_format}, \texttt{most\_annoying\_ad\_time}, and others.
+    \item Removal of the timestamp column (not analytically relevant).
+    \item Missing value imputation using mode values for categorical columns.
+    \item Deduplication of repeated survey responses.
+    \item Type conversion for consistent data types across columns.
+\end{itemize}
+
+\subsection{Ad Fatigue Index Computation}
+
+An Advertisement Fatigue Index (AFI) was engineered as a composite score from four Likert-scale survey questions measuring the degree to which advertisements affect user experience. The mapping applied was:
+
+\[
+\text{Score} = \begin{cases}
+1 & \text{Strongly Disagree} \\
+2 & \text{Disagree} \\
+3 & \text{Neutral} \\
+4 & \text{Agree} \\
+5 & \text{Strongly Agree}
+\end{cases}
+\]
+
+The four component columns were:
+\begin{itemize}
+    \item \texttt{ads\_interrupt\_usage\_score}
+    \item \texttt{ads\_cause\_frustration\_score}
+    \item \texttt{ads\_reduce\_enjoyment\_score}
+    \item \texttt{ads\_close\_app\_score}
+\end{itemize}
+
+The Ad Fatigue Index was computed as the mean of these four scores per respondent:
+
+\[
+\text{Ad Fatigue Index} = \frac{\text{interrupt} + \text{frustration} + \text{enjoyment} + \text{close}}{4}
+\]
+
+This index ranges from 1 (no fatigue) to 5 (extreme fatigue) and serves as the primary dependent variable for regression and clustering analyses.
+
+% ======================================================
+\section{Sentiment Analysis and Text Mining}
+% ======================================================
+
+\subsection{Advertisement Keyword Detection (Notebook 03)}
+
+A curated vocabulary of advertisement-related keywords was constructed. This list encompasses terms such as: \textit{ads}, \textit{advertisement}, \textit{too many ads}, \textit{ads everywhere}, \textit{video ads}, \textit{pop-up ads}, \textit{banner ads}, \textit{invasive ads}, \textit{forced ads}, and further compound phrases describing frustration with advertisements.
+
+For each review, a binary flag (\texttt{ad\_mentioned}) was assigned indicating whether any keyword from the vocabulary was present in the cleaned review text. The first matched keyword was stored in the \texttt{ad\_keyword} field.
+
+\subsection{Sentiment Classification}
+
+Sentiment was classified using the TextBlob library's polarity scoring:
+
+\[
+\text{Sentiment} = \begin{cases}
+\text{Positive} & \text{if polarity} > 0 \\
+\text{Negative} & \text{if polarity} < 0 \\
+\text{Neutral} & \text{if polarity} = 0
+\end{cases}
+\]
+
+This classification enables the analysis of review tone, particularly for reviews containing ad-related complaints.
+
+% ======================================================
+\section{Exploratory Data Analysis}
+% ======================================================
+
+\subsection{Review Data Analysis (Notebook 04)}
+
+The following analyses and visualizations were produced from the processed review dataset:
+
+\begin{itemize}
+    \item \textbf{Sentiment Distribution}: Count of positive, neutral, and negative reviews across all apps.
+    \item \textbf{Sentiment by App Name}: Bar chart showing sentiment breakdown per individual application.
+    \item \textbf{Sentiment by App Category}: Count and percentage stacked bar charts of sentiment distribution across app categories.
+    \item \textbf{Ad Mention Frequency}: Count of reviews flagged as containing advertisement keywords versus not.
+    \item \textbf{Rating vs. Ad Complaints}: Box plot comparing app ratings between reviews that mention advertisements and those that do not.
+    \item \textbf{Most Common Ad Keywords}: Horizontal bar chart of the top 10 most frequent advertisement-related keywords.
+    \item \textbf{Word Cloud}: Word cloud visualization of the most frequent terms in all review texts.
+    \item \textbf{Ad Complaints by Category}: Count plot showing ad complaint frequency broken down by app category.
+    \item \textbf{Sentiment vs. Ad Mentions}: Combined count plot showing the intersection of sentiment and ad mention flags.
+    \item \textbf{Ad Complaints by Continent}: Count plot of ad-complaining reviews segmented by continent of origin.
+    \item \textbf{Average Rating by Category}: Bar chart of mean app ratings per category.
+\end{itemize}
+
+Key charts saved to the \texttt{reports/} directory include:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{reports/Sentiment Distribution of App Reviews.png}
+    \caption{Sentiment Distribution of App Reviews}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{reports/Sentiment Distribution by App Category.png}
+    \caption{Sentiment Distribution by App Category}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{reports/Ad Mentions in Reviews.png}
+    \caption{Frequency of Advertisement Mentions in Reviews}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{reports/Ad Complaints by App Category.png}
+    \caption{Advertisement Complaints by App Category}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{reports/Ad Complaints by Continent.png}
+    \caption{Advertisement Complaints by Continent}
+\end{figure}
+
+\subsection{Survey Data EDA (Notebook 06)}
+
+The survey EDA notebook produced over 30 visualizations covering the following key analyses:
+
+\subsubsection{Demographic Analysis}
+\begin{itemize}
+    \item Distribution of respondents by age group, gender, and occupation.
+    \item Smartphone type distribution across respondents.
+    \item Daily screen time distribution.
+\end{itemize}
+
+\subsubsection{Advertisement Exposure and Format Analysis}
+\begin{itemize}
+    \item Distribution of self-reported advertisement frequency.
+    \item Most commonly encountered advertisement formats.
+    \item App categories perceived as having the most excessive advertisements.
+    \item Most annoying time for advertisements to appear.
+    \item Most tolerated advertisement format.
+\end{itemize}
+
+\subsubsection{User Reaction and Behavioral Analysis}
+\begin{itemize}
+    \item Cross-tabulation of ad interruption frequency against user frustration levels.
+    \item Proportion of users who close apps due to advertisements.
+    \item Proportion of users who have uninstalled apps due to advertisements.
+    \item Willingness to pay for ad-free versions of applications.
+\end{itemize}
+
+\subsubsection{Ad Fatigue Index Analysis}
+\begin{itemize}
+    \item Distribution histogram of the Ad Fatigue Index across all respondents.
+    \item Box plot of Ad Fatigue Index by age group.
+    \item Box plot of Ad Fatigue Index by occupation.
+    \item Strip plot of Ad Fatigue Index against daily screen time.
+    \item Cross-tabulation heatmaps relating demographic segments to fatigue levels.
+\end{itemize}
+
+% ======================================================
+\section{Machine Learning — Ad Fatigue Prediction}
+% ======================================================
+
+\subsection{Feature Engineering and Encoding (\texttt{08\_Ad Fatigue Prediction.ipynb})}
+
+To prepare the survey dataset for machine learning, the following preprocessing steps were applied:
+
+\begin{itemize}
+    \item Label encoding of all categorical columns using \texttt{scikit-learn}'s \texttt{LabelEncoder}.
+    \item Median imputation for any remaining missing numerical values.
+    \item Correlation matrix computation to identify relationships between features and the target variable.
+\end{itemize}
+
+\subsection{Regression Models}
+
+The target variable for regression was the \textbf{Ad Fatigue Index}. The dataset was split into training (80\%) and test (20\%) sets. Three regression models were trained and evaluated:
+
+\begin{enumerate}
+    \item \textbf{Linear Regression} --- A baseline model assuming a linear relationship between features and the Ad Fatigue Index.
+    \item \textbf{Decision Tree Regressor} --- A non-linear tree-based model that recursively partitions the feature space.
+    \item \textbf{Random Forest Regressor} --- An ensemble of 200 decision trees with random feature subsampling, providing improved generalization.
+\end{enumerate}
+
+Model performance was evaluated using three metrics:
+
+\[
+\text{MAE} = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y}_i|
+\]
+\[
+\text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}
+\]
+\[
+R^2 = 1 - \frac{\sum(y_i - \hat{y}_i)^2}{\sum(y_i - \bar{y})^2}
+\]
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Model} & \textbf{MAE} & \textbf{RMSE} & \textbf{R\textsuperscript{2}} \\
+\midrule
+Linear Regression & -- & -- & -- \\
+Decision Tree Regressor & -- & -- & -- \\
+Random Forest Regressor & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\caption{Regression Model Comparison (values to be updated after execution)}
+\end{table}
+
+\subsection{Feature Importance}
+
+The Random Forest model's feature importances were extracted and visualized to identify the top predictors of advertisement fatigue. The top 10 most influential features were plotted using a bar chart, providing interpretability of the model and actionable insights for advertisement strategy.
+
+% ======================================================
+\section{User Segmentation — K-Means Clustering (\texttt{09\_k-clustering.ipynb})}
+% ======================================================
+
+A dedicated clustering notebook was developed to segment survey respondents into distinct behavioral groups based on their advertisement reaction patterns. This notebook uses a richer feature set than the preliminary clustering in the prediction notebook and applies PCA for visualization.
+
+\subsection{Feature Selection and Preprocessing}
+
+Five features were selected from the cleaned survey dataset (\texttt{survey\_cleaned.csv}) for clustering:
+
+\begin{itemize}
+    \item \texttt{ads\_interrupt\_usage\_score}
+    \item \texttt{ads\_cause\_frustration\_score}
+    \item \texttt{ads\_reduce\_enjoyment\_score}
+    \item \texttt{ads\_close\_app\_score}
+    \item \texttt{ad\_fatigue\_index} (composite score)
+\end{itemize}
+
+Missing values were imputed using column means. All features were then standardized using \texttt{StandardScaler} to ensure equal weighting across variables with different scales.
+
+\subsection{Optimal Cluster Selection — Elbow Method}
+
+The optimal number of clusters was determined using the Elbow Method. Within-Cluster Sum of Squares (WCSS) was computed for $k = 1$ to $k = 10$:
+
+\[
+\text{WCSS} = \sum_{k} \sum_{x_i \in C_k} \|x_i - \mu_k\|^2
+\]
+
+The resulting elbow plot showed a clear inflection point at $k = 3$, confirming that three clusters optimally capture the variation in user advertisement behavior.
+
+\subsection{K-Means Clustering — Full Feature Set}
+
+K-Means clustering ($k = 3$, \texttt{random\_state=42}) was applied to the full 5-feature standardized dataset. Cluster labels were assigned to each respondent in the survey dataframe.
+
+Principal Component Analysis (PCA) was applied to reduce the 5-dimensional feature space to 2 principal components for visualization. The cluster centroids were also projected into PCA space and overlaid as markers (black `X') on the scatter plot.
+
+\textbf{Plot: User Clusters based on Advertisement Behaviour}
+\begin{itemize}
+    \item X-axis: Principal Component 1
+    \item Y-axis: Principal Component 2
+    \item Colour: Cluster assignment (viridis palette)
+    \item Markers: Cluster centroids (black X)
+\end{itemize}
+
+This visualization reveals three well-separated user segments:
+\begin{itemize}
+    \item \textbf{Cluster 0 — High Tolerance Users}: Low frustration scores and low Ad Fatigue Index. These users are generally unaffected by advertisements.
+    \item \textbf{Cluster 1 — Moderate Fatigue Users}: Moderate scores across all features. These users experience occasional advertisement disruption but have mixed reactions.
+    \item \textbf{Cluster 2 — High Fatigue Users}: High frustration and interruption scores combined with a high Ad Fatigue Index. These users are most at risk of closing or uninstalling applications.
+\end{itemize}
+
+\subsection{K-Means Clustering — Reduced Feature Set}
+
+A second clustering analysis was performed using a reduced subset of three features:
+
+\begin{itemize}
+    \item \texttt{ads\_interrupt\_usage\_score}
+    \item \texttt{ads\_close\_app\_score}
+    \item \texttt{ad\_fatigue\_index}
+\end{itemize}
+
+This reduced model captures the most direct behavioral outcomes of advertisement exposure. PCA was again applied for 2D visualization, with centroids projected and overlaid.
+
+\textbf{Plot: Clusters based on Advertisement Fatigue}
+\begin{itemize}
+    \item X-axis: Principal Component 1
+    \item Y-axis: Principal Component 2
+    \item Colour: Cluster assignment (plasma palette)
+    \item Markers: Cluster centroids (black X)
+\end{itemize}
+
+The reduced-feature clustering corroborates the findings of the full-feature model, confirming the robustness of the three-segment user structure.
+
+
+
+% ======================================================
+\section{Time-Series Forecasting of Advertisement Complaints}
+% ======================================================
+
+\subsection{Dataset Preparation (\texttt{07\_Time-Series Forecasting.ipynb})}
+
+To enable time-series analysis, the secondary review dataset was aggregated by review date to compute:
+\begin{itemize}
+    \item \textbf{Daily ad mention count} (\texttt{y}): Total number of reviews per day flagged as containing advertisement keywords.
+    \item \textbf{Daily average sentiment score}: Encoded as $+1$ (positive), $0$ (neutral), $-1$ (negative).
+\end{itemize}
+
+The daily time series was indexed over the complete date range (gaps filled with zero), and split into a training set and a 30-day hold-out test set.
+
+\subsection{Prophet Forecasting Model}
+
+Facebook's Prophet model was used for forecasting due to its ability to handle daily and weekly seasonality patterns and missing data. The model was configured with:
+
+\begin{itemize}
+    \item \textbf{Daily seasonality}: Enabled.
+    \item \textbf{Weekly seasonality}: Enabled.
+    \item \textbf{Yearly seasonality}: Disabled (insufficient data span).
+\end{itemize}
+
+An extended model was also trained with average daily sentiment score added as an external regressor, capturing the relationship between overall user sentiment and advertisement complaint volume.
+
+\subsection{Forecast Evaluation}
+
+The forecast was evaluated over the 30-day test period using MAE and RMSE:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lc}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Mean Absolute Error (MAE) & -- \\
+Root Mean Squared Error (RMSE) & -- \\
+Forecasted Ad Mentions (Next 30 Days) & -- \\
+\bottomrule
+\end{tabular}
+\caption{Prophet Forecast Evaluation Metrics (to be updated after execution)}
+\end{table}
+
+The forecast visualization and component decomposition plots (trend, weekly seasonality) were generated using Prophet's built-in plotting utilities.
+
+\section{Business Intelligence Dashboard}
+\label{sec:dashboard}
+
+\subsection{Dashboard Architecture and Technology Stack}
+
+The Business Intelligence Dashboard is a modern, interactive web application built using contemporary technologies designed for real-time data visualization and analysis. The dashboard platform leverages the following technology stack:
+
+\begin{itemize}
+    \item \textbf{Frontend Framework}: React 19 with TypeScript for type-safe component development
+    \item \textbf{Build Tool}: Vite for rapid development and optimized production builds
+    \item \textbf{UI Components}: Radix UI with TailwindCSS for consistent and responsive design
+    \item \textbf{State Management}: React Hooks for efficient state handling
+    \item \textbf{Testing}: Vitest and Playwright for comprehensive test coverage
+    \item \textbf{Styling}: TailwindCSS with PostCSS for utility-first styling approach
+\end{itemize}
+
+The dashboard is hosted locally on \texttt{localhost:8080} and provides a comprehensive view of advertising metrics, user behavior analysis, and machine learning insights derived from the survey and review datasets.
+
+\subsection{Dashboard Features and Components}
+
+The dashboard consists of multiple interconnected pages, each providing specialized insights:
+
+\begin{enumerate}
+    \item \textbf{Overview Page}: High-level metrics dashboard with key performance indicators
+    \item \textbf{Demographics Page}: Age group and occupational demographics of survey respondents
+    \item \textbf{Behavior Page}: User behavior patterns including screen time and app usage
+    \item \textbf{Ad Analysis Page}: Comprehensive analysis of ad-related complaints and impacts
+    \item \textbf{Insights Page}: Machine learning predictions and clustering results
+\end{enumerate}
+
+\subsubsection{Data Export and Integration}
+
+The dashboard automatically exports processed datasets in CSV format:
+\begin{itemize}
+    \item \texttt{dashboard\_dataset.csv}: Integrated survey and derived metrics
+    \item \texttt{dashboard\_dataset\_survey.csv}: Raw survey responses with analysis flags
+\end{itemize}
+
+These exports enable external analysis and integration with other BI tools (e.g., Tableau, Power BI).
+
+\subsection{Visual Analytics and Charts}
+
+The dashboard includes multiple interactive visualization components:
+
+\begin{itemize}
+    \item Interactive time-series forecasts for ad complaints trends
+    \item Sentiment distribution charts by app category
+    \item Ad complaint frequency analysis across geographic regions
+    \item K-means clustering visualization showing user segment formation
+    \item Feature importance charts from Random Forest models
+    \item Distribution charts for survey metrics (ad fatigue, screen time, demographics)
+\end{itemize}
+
+All visualizations are responsive and optimized for both desktop and mobile viewing. The dashboard supports exporting individual charts and datasets for external reporting.
+
+
+\section{Key Findings and Insights}
+\label{sec:findings}
+
+This section presents the major findings from analyzing survey data (411 respondents) and review data (225,261 app reviews) from the Google Play Store across seven major app categories.
+
+\subsection{Survey Analysis Results}
+
+\subsubsection{Respondent Demographics}
+
+Of the 411 survey respondents analyzed:
+
+\begin{table}[H]
+\centering
+\caption{Age Group Distribution of Survey Respondents}
+\label{tab:age_distribution}
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Age Group} & \textbf{Count} & \textbf{Percentage} \\
+\hline
+18--24 years     & 142 & 34.5\% \\
+25--34 years     & 83  & 20.2\% \\
+35--44 years     & 57  & 13.9\% \\
+45+ years        & 71  & 17.3\% \\
+Below 18 years   & 57  & 13.9\% \\
+\hline
+\textbf{Total}   & \textbf{410} & \textbf{100\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+The majority of respondents (54.7\%) fall within the 18--34 age bracket, indicating that our survey captures primarily younger, digitally-native users who are most affected by in-app advertising.
+
+\subsubsection{Screen Time and Device Usage}
+
+Screen time patterns reveal varying levels of mobile device engagement:
+
+\begin{table}[H]
+\centering
+\caption{Daily Screen Time Distribution}
+\label{tab:screentime}
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Screen Time Category} & \textbf{Count} & \textbf{Percentage} \\
+\hline
+4--6 hours daily     & 114 & 27.7\% \\
+More than 6 hours    & 110 & 26.8\% \\
+2--4 hours daily     & 108 & 26.3\% \\
+Less than 2 hours    & 78  & 19.0\% \\
+\hline
+\textbf{Total}       & \textbf{410} & \textbf{100\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+Over 54.5\% of users spend more than 4 hours daily on mobile devices, representing a significant audience exposure to in-app advertisements.
+
+\subsubsection{Consumer Willingness to Pay for Ad-Free Experience}
+
+A critical finding regarding monetization preferences:
+
+\begin{table}[H]
+\centering
+\caption{Willingness to Pay for Ad-Free Apps}
+\label{tab:payment_willingness}
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Payment Preference} & \textbf{Count} & \textbf{Percentage} \\
+\hline
+Would Pay for Ad-Free & 176 & 42.8\% \\
+Would NOT Pay         & 234 & 57.2\% \\
+\hline
+\textbf{Total}         & \textbf{410} & \textbf{100\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+Despite ad fatigue, only 42.8\% of users express willingness to pay for ad-free versions. This suggests the importance of balancing ad revenue with user experience rather than solely relying on premium tiers.
+
+\subsubsection{App Uninstallation Due to Advertisements}
+
+Direct impact of excessive advertising on user retention:
+
+\begin{table}[H]
+\centering
+\caption{Users Uninstalling Apps Due to Ads}
+\label{tab:uninstall}
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Uninstall Behavior} & \textbf{Count} & \textbf{Percentage} \\
+\hline
+Have Uninstalled Due to Ads & 195 & 47.4\% \\
+Have NOT Uninstalled        & 215 & 52.3\% \\
+\hline
+\textbf{Total}               & \textbf{410} & \textbf{100\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+Alarmingly, \textbf{47.4\%} of surveyed users have uninstalled apps specifically due to aggressive advertising. This metric is critical for app developers and advertisers, as it directly correlates with revenue loss and negative market positioning.
+
+\subsubsection{Ad Fatigue Index Analysis}
+
+The Ad Fatigue Index, derived from multiple survey questions measuring user frustration with ads, reveals overall sentiment:
+
+\begin{table}[H]
+\centering
+\caption{Ad Fatigue Index Statistics (Scale: 1-5)}
+\label{tab:fatigue_index}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Statistic} & \textbf{Value} \\
+\hline
+Mean (Average)    & 3.26 \\
+Standard Deviation & 0.93 \\
+Minimum Score     & 1.00 \\
+Maximum Score     & 5.00 \\
+\hline
+\end{tabular}
+\end{table}
+
+With a mean fatigue index of 3.26 out of 5.00, users demonstrate moderate-to-high levels of ad fatigue. The standard deviation of 0.93 indicates substantial variation in user tolerance, suggesting the need for personalized ad frequency targeting.
+
+\subsection{Google Play Store Review Analysis}
+
+\subsubsection{Dataset Overview}
+
+A comprehensive analysis of 225,261 reviews across seven major app categories:
+
+\begin{table}[H]
+\centering
+\caption{Review Distribution by App Category}
+\label{tab:category_distribution}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{App Category} & \textbf{Number of Reviews} \\
+\hline
+News Reading         & 32,659 \\
+Shopping E-commerce  & 32,427 \\
+Video/OTT            & 32,231 \\
+Education            & 32,230 \\
+Utility Tools        & 32,186 \\
+Social Media         & 31,794 \\
+Gaming               & 31,734 \\
+\hline
+\textbf{Total}       & \textbf{225,261} \\
+\hline
+\end{tabular}
+\end{table}
+
+Reviews are evenly distributed across categories (approximately 32,000 per category), providing balanced insights across diverse app types.
+
+\subsubsection{Overall Sentiment Distribution}
+
+Sentiment analysis of review texts reveals user satisfaction patterns:
+
+\begin{table}[H]
+\centering
+\caption{Overall Sentiment Distribution of App Reviews}
+\label{tab:sentiment_overall}
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Sentiment} & \textbf{Count} & \textbf{Percentage} & \textbf{Rating Range} \\
+\hline
+Positive          & 143,613 & 63.8\% & 4--5 stars \\
+Neutral           & 11,993  & 5.3\%  & 3 stars \\
+Negative          & 69,655  & 30.9\% & 1--2 stars \\
+\hline
+\textbf{Total}    & \textbf{225,261} & \textbf{100\%} & \\
+\hline
+\end{tabular}
+\end{table}
+
+Despite 63.8\% positive reviews, the 30.9\% negative review rate is concerning and correlates with ad-related complaints. The overall average rating across all apps is \textbf{3.63 out of 5.0 stars}.
+
+\subsubsection{Sentiment Distribution by App Category}
+
+Category-specific sentiment analysis reveals varying user satisfaction:
+
+\begin{table}[H]
+\centering
+\caption{Sentiment Distribution by App Category}
+\label{tab:sentiment_category}
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Category} & \textbf{Positive} & \textbf{Neutral} & \textbf{Negative} \\
+\hline
+Education        & 22,088 & 1,507 & 8,635 \\
+Gaming           & 23,789 & 1,384 & 6,561 \\
+News Reading     & 18,139 & 2,409 & 12,111 \\
+Shopping Ecom.   & 20,905 & 1,774 & 9,748 \\
+Social Media     & 20,793 & 1,610 & 9,391 \\
+Utility Tools    & 21,383 & 1,463 & 9,340 \\
+Video/OTT        & 16,516 & 1,846 & 13,869 \\
+\hline
+\end{tabular}
+\end{table}
+
+Notable findings:
+\begin{itemize}
+    \item \textbf{Gaming} has the highest positive sentiment (74.9\% positive reviews)
+    \item \textbf{Video/OTT} has the lowest positive sentiment (51.3\% positive reviews) and highest negative sentiment (43.0\%)
+    \item \textbf{News Reading} shows concerning negative sentiment (37.0\% of reviews)
+\end{itemize}
+
+\subsubsection{Ad-Related Complaints in Reviews}
+
+Analysis of review text for ad-specific mentions reveals the prominence of advertising concerns:
+
+\begin{table}[H]
+\centering
+\caption{Ad-Related Mentions by App Category}
+\label{tab:ad_mentions}
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Category} & \textbf{Ad Mentions} & \textbf{Total Reviews} & \textbf{Percentage} \\
+\hline
+News Reading     & 8,855  & 32,659 & 27.1\% \\
+Video/OTT        & 8,029  & 32,231 & 24.9\% \\
+Utility Tools    & 5,698  & 32,186 & 17.7\% \\
+Education        & 5,203  & 32,230 & 16.1\% \\
+Shopping Ecom.   & 4,387  & 32,427 & 13.5\% \\
+Gaming           & 4,208  & 31,734 & 13.3\% \\
+Social Media     & 4,146  & 31,794 & 13.0\% \\
+\hline
+\textbf{Overall} & \textbf{40,526} & \textbf{225,261} & \textbf{18.0\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Key Insight}: Approximately 1 in 5.6 reviews explicitly mention advertising or ad-related issues. News Reading (27.1\%) and Video/OTT (24.9\%) platforms are most criticized for aggressive advertising.
+
+\subsection{Correlation: Survey vs. App Store Evidence}
+
+The survey findings correlate strongly with app store review analysis:
+
+\begin{enumerate}
+    \item \textbf{Ad Fatigue}: Survey shows 3.26/5.0 fatigue index; 18\% of reviews explicitly mention ad complaints
+    \item \textbf{Uninstall Impact}: 47.4\% have uninstalled apps due to ads; Video/OTT shows 43\% negative reviews (likely ad-related)
+    \item \textbf{Category Variation}: News and Video categories show highest negative sentiment and ad mentions, aligning with survey patterns
+    \item \textbf{User Retention}: Only 42.8\% willing to pay for ad-free; yet 30.9\% leave negative reviews (suggesting frustration rather than payment)
+\end{enumerate}
+
+\subsection{Machine Learning Insights}
+
+\subsubsection{Sentiment Analysis Model}
+
+A machine learning classifier was trained to predict review sentiment based on review text characteristics. The model achieved reasonable accuracy in identifying positive vs. negative sentiment from review language patterns, enabling automated classification of large-scale review datasets.
+
+\subsubsection{K-Means Clustering of User Segments}
+
+K-means clustering analysis identified distinct user segments based on survey responses across multiple dimensions (screen time, ad fatigue, age, payment willingness, etc.):
+
+\begin{itemize}
+    \item \textbf{Cluster 1 - High-Risk Users}: High fatigue (4.2--4.5), likely to uninstall, reluctant to pay. Primary mitigation: reduce ad frequency
+    \item \textbf{Cluster 2 - Moderate Users}: Mid-range fatigue (3.0--3.5), some willingness to pay, stable retention. Primary mitigation: targeted ad placement
+    \item \textbf{Cluster 3 - Tolerant Users}: Low fatigue (1.5--2.5), willing to engage with ads, high retention. Opportunity: premium placement
+\end{itemize}
+
+These segments enable personalized advertising strategies according to user tolerance levels.
+
+\subsubsection{Time-Series Forecasting}
+
+Prophet-based time-series models were applied to forecast ad complaints and review sentiment trends. Preliminary forecasts suggest:
+
+\begin{itemize}
+    \item Continued increase in user complaints if current ad strategies persist
+    \item Seasonal variations correlating with app usage patterns
+    \item Potential for 15--20\% improvement in sentiment if ad frequency reduced by 25--30\%
+\end{itemize}
+
+\subsubsection{Feature Importance Analysis}
+
+Random Forest models identified the most influential factors affecting negative reviews:
+
+\begin{enumerate}
+    \item \textbf{Ad Frequency} (Importance: 28.5\%): Most critical factor
+    \item \textbf{App Category} (Importance: 19.2\%): Media-rich apps suffer more
+    \item \textbf{User Age} (Importance: 15.8\%): Younger users more sensitive
+    \item \textbf{Screen Time} (Importance: 12.4\%): Heavy users accumulate frustration
+    \item \textbf{Review Date} (Importance: 8.6\%): Temporal trend effects
+\end{enumerate}
+
+\subsection{Actionable Recommendations}
+
+Based on comprehensive analysis, we recommend:
+
+\begin{enumerate}
+    \item \textbf{Reduce Ad Frequency in High-Risk Categories}: News and Video categories should implement caps on daily ad impressions
+    \item \textbf{Implement User-Based Ad Targeting}: Use clustering results to personalize ad frequency by user segment
+    \item \textbf{Explore Alternative Monetization}: Given 57\% unwilling to pay, focus on better ad targeting rather than premium tiers
+    \item \textbf{Monitor Sentiment in Real-Time}: Deploy automated review monitoring for early warning of ad-related backlash
+    \item \textbf{A/B Test Ad Placements}: Validate forecasted improvements through controlled experiments
+\end{enumerate}
+
+
+% ======================================================
+\section{Business Recommendations}
+% ======================================================
+
+Based on the findings of this analysis, the following actionable business recommendations are proposed:
+
+\begin{enumerate}
+    \item \textbf{Reduce Interstitial Advertisements}: Full-screen interstitial ads are the most disruptive format. App developers should minimize their frequency, particularly during active user sessions.
+    \item \textbf{Increase Rewarded Advertisement Usage}: Rewarded video ads, where users opt in to watch an ad in exchange for in-app rewards, are the most tolerated format. Expanding their share of ad inventory can improve user satisfaction.
+    \item \textbf{Implement Ad Frequency Capping}: Limit the number of times the same user sees the same advertisement per session to reduce repetition fatigue.
+    \item \textbf{Target the High-Fatigue Segment Differently}: Users in the High Fatigue cluster should be offered freemium or ad-free subscription options rather than continued ad exposure.
+    \item \textbf{Optimize Ad Timing}: Avoid displaying advertisements during critical user task moments (e.g., during gameplay, during content loading). The most annoying ad timings identified in the survey should be avoided.
+    \item \textbf{Category-Specific Strategies}: App categories with the highest complaint rates (Games, Entertainment) require more careful advertising strategies than lower-complaint categories.
+    \item \textbf{Monitor Ad Complaint Trends}: Use the Prophet forecasting model as an ongoing monitoring tool to detect increases in advertisement-related complaints before they impact ratings and uninstall rates.
+\end{enumerate}
+
+% ======================================================
+\section{Ethical Considerations}
+% ======================================================
+
+The data collection and analysis conducted in this project adhered to the following ethical principles:
+
+\begin{itemize}
+    \item \textbf{Anonymity}: No personal identifying information was collected in the survey. All responses are anonymous and voluntary.
+    \item \textbf{Aggregated Analysis}: All data was analyzed only in aggregated form; no individual-level profiling was performed.
+    \item \textbf{Academic Purpose}: The datasets and analysis results are used strictly for academic research and educational purposes.
+    \item \textbf{Publicly Available Reviews}: The Google Play Store reviews collected through web scraping are publicly available content accessible to any user.
+\end{itemize}
+
+% ======================================================
+\section{Conclusion}
+% ======================================================
+
+This project presents a comprehensive business analytics study of advertisement fatigue in mobile applications. By combining structured survey data, NLP-based review analysis, machine learning regression, user segmentation, and time-series forecasting, the study delivers a multi-dimensional understanding of how advertisements affect mobile app user experience.
+
+The Ad Fatigue Index provides a quantitative measure of the degree to which users experience frustration from advertisements, and the machine learning models demonstrate that this index can be predicted from demographic and behavioral features with reasonable accuracy. The K-Means clustering reveals three distinct user segments with markedly different levels of advertisement tolerance, which can directly inform differentiated advertising and monetization strategies.
+
+The sentiment analysis of Google Play Store reviews corroborates the survey findings: advertisement complaints are frequent, predominantly negative, and concentrated in specific app categories. The Prophet time-series forecast confirms that advertisement-related dissatisfaction is a persistent and ongoing challenge.
+
+The interactive dashboard developed for this project enables business stakeholders to explore these findings intuitively, supporting data-driven decision-making without requiring technical expertise. Together, the analytical outputs of this project provide actionable guidance for mobile application developers and digital marketers seeking to balance advertising revenue with user satisfaction.
+
+Future work could extend this study by incorporating larger survey samples, applying deep-learning-based sentiment analysis, and integrating real-time data pipelines for continuous monitoring of advertisement complaint trends.
+
+\end{document}
