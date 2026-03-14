@@ -213,7 +213,7 @@ The primary tools and technologies used in this project include:
 
 \textbf{tqdm} --- Used for progress monitoring during large-scale data scraping and processing operations.
 
-\textbf{Scikit-learn} --- Used for machine learning tasks including label encoding, feature scaling, train-test splitting, regression modeling (Linear Regression, Decision Tree, Random Forest), K-Means clustering, and model evaluation.
+\textbf{Scikit-learn} --- Used for machine learning tasks including label encoding, feature scaling (StandardScaler), train-test splitting, regression modeling (Linear Regression, Decision Tree, Random Forest), K-Means clustering, Principal Component Analysis (PCA) for dimensionality reduction and cluster visualization, and model evaluation.
 
 \textbf{Prophet} --- Used for time-series forecasting of daily advertisement mention trends with daily and weekly seasonality components.
 
@@ -472,33 +472,79 @@ Random Forest Regressor & -- & -- & -- \\
 The Random Forest model's feature importances were extracted and visualized to identify the top predictors of advertisement fatigue. The top 10 most influential features were plotted using a bar chart, providing interpretability of the model and actionable insights for advertisement strategy.
 
 % ======================================================
-\section{User Segmentation — K-Means Clustering}
+\section{User Segmentation — K-Means Clustering (\texttt{09\_k-clustering.ipynb})}
 % ======================================================
 
-K-Means clustering was applied to segment survey respondents into distinct behavioral groups based on their advertisement reaction scores. The four features used for clustering were:
+A dedicated clustering notebook was developed to segment survey respondents into distinct behavioral groups based on their advertisement reaction patterns. This notebook uses a richer feature set than the preliminary clustering in the prediction notebook and applies PCA for visualization.
+
+\subsection{Feature Selection and Preprocessing}
+
+Five features were selected from the cleaned survey dataset (\texttt{survey\_cleaned.csv}) for clustering:
 
 \begin{itemize}
     \item \texttt{ads\_interrupt\_usage\_score}
     \item \texttt{ads\_cause\_frustration\_score}
     \item \texttt{ads\_reduce\_enjoyment\_score}
     \item \texttt{ads\_close\_app\_score}
+    \item \texttt{ad\_fatigue\_index} (composite score)
 \end{itemize}
 
-\subsection{Preprocessing for Clustering}
+Missing values were imputed using column means. All features were then standardized using \texttt{StandardScaler} to ensure equal weighting across variables with different scales.
 
-Features were standardized using \texttt{StandardScaler} before clustering to ensure equal contribution of all variables regardless of their original scale.
+\subsection{Optimal Cluster Selection — Elbow Method}
 
-\subsection{Clustering Results}
+The optimal number of clusters was determined using the Elbow Method. Within-Cluster Sum of Squares (WCSS) was computed for $k = 1$ to $k = 10$:
 
-K-Means was applied with $k = 3$ clusters, producing three distinct user segments:
+\[
+\text{WCSS} = \sum_{k} \sum_{x_i \in C_k} \|x_i - \mu_k\|^2
+\]
+
+The resulting elbow plot showed a clear inflection point at $k = 3$, confirming that three clusters optimally capture the variation in user advertisement behavior.
+
+\subsection{K-Means Clustering — Full Feature Set}
+
+K-Means clustering ($k = 3$, \texttt{random\_state=42}) was applied to the full 5-feature standardized dataset. Cluster labels were assigned to each respondent in the survey dataframe.
+
+Principal Component Analysis (PCA) was applied to reduce the 5-dimensional feature space to 2 principal components for visualization. The cluster centroids were also projected into PCA space and overlaid as markers (black `X') on the scatter plot.
+
+\textbf{Plot: User Clusters based on Advertisement Behaviour}
+\begin{itemize}
+    \item X-axis: Principal Component 1
+    \item Y-axis: Principal Component 2
+    \item Colour: Cluster assignment (viridis palette)
+    \item Markers: Cluster centroids (black X)
+\end{itemize}
+
+This visualization reveals three well-separated user segments:
+\begin{itemize}
+    \item \textbf{Cluster 0 — High Tolerance Users}: Low frustration scores and low Ad Fatigue Index. These users are generally unaffected by advertisements.
+    \item \textbf{Cluster 1 — Moderate Fatigue Users}: Moderate scores across all features. These users experience occasional advertisement disruption but have mixed reactions.
+    \item \textbf{Cluster 2 — High Fatigue Users}: High frustration and interruption scores combined with a high Ad Fatigue Index. These users are most at risk of closing or uninstalling applications.
+\end{itemize}
+
+\subsection{K-Means Clustering — Reduced Feature Set}
+
+A second clustering analysis was performed using a reduced subset of three features:
 
 \begin{itemize}
-    \item \textbf{Cluster 0 --- High Tolerance Users}: Respondents who reported low frustration levels, minimal app closure due to ads, and generally neutral reactions to advertisements.
-    \item \textbf{Cluster 1 --- Moderate Fatigue Users}: Respondents with moderate advertisement fatigue who occasionally close apps but show mixed reactions across the frustration indicators.
-    \item \textbf{Cluster 2 --- High Fatigue Users}: Respondents who strongly agree that advertisements interrupt usage, cause frustration, reduce enjoyment, and lead to app closure.
+    \item \texttt{ads\_interrupt\_usage\_score}
+    \item \texttt{ads\_close\_app\_score}
+    \item \texttt{ad\_fatigue\_index}
 \end{itemize}
 
-A scatter plot of the clusters was produced with frustration score on the X-axis and enjoyment reduction score on the Y-axis, showing clear separation between user segments.
+This reduced model captures the most direct behavioral outcomes of advertisement exposure. PCA was again applied for 2D visualization, with centroids projected and overlaid.
+
+\textbf{Plot: Clusters based on Advertisement Fatigue}
+\begin{itemize}
+    \item X-axis: Principal Component 1
+    \item Y-axis: Principal Component 2
+    \item Colour: Cluster assignment (plasma palette)
+    \item Markers: Cluster centroids (black X)
+\end{itemize}
+
+The reduced-feature clustering corroborates the findings of the full-feature model, confirming the robustness of the three-segment user structure.
+
+
 
 % ======================================================
 \section{Time-Series Forecasting of Advertisement Complaints}
