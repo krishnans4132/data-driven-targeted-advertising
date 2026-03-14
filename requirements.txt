@@ -4,11 +4,9 @@ matplotlib
 seaborn
 nltk
 textblob
-requests
-beautifulsoup4
-lxml
 wordcloud
 google-play-scraper
 tqdm
+scikit-learn
+prophet
 jupyter
- 
