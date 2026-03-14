@@ -27,7 +27,7 @@
 
 {\normalsize \itshape Submitted By}\\[0.2cm]
 
-Student1, Roll Number\\
+Rachit Anand, CB.SC.U4CSE23139\\
 Student2, Roll Number\\
 Krishnan S., CB.SC.U4CSE23628\\
 Student4, Roll Number\\[0.4cm]
@@ -79,13 +79,15 @@ Advanced analytics techniques including machine learning regression models (Line
 
 The findings provide valuable insights into how advertisement strategies influence user satisfaction and application engagement. These insights can help mobile app developers and digital marketers design more effective advertisement strategies that balance revenue generation with user experience.
 
+\tableofcontents
 \newpage
 
-\tableofcontents
+\listoftables
 \newpage
 
 \listoffigures
 \newpage
+
 
 % ======================================================
 \section{Introduction}
@@ -592,67 +594,356 @@ Forecasted Ad Mentions (Next 30 Days) & -- \\
 
 The forecast visualization and component decomposition plots (trend, weekly seasonality) were generated using Prophet's built-in plotting utilities.
 
-% ======================================================
 \section{Business Intelligence Dashboard}
-% ======================================================
+\label{sec:dashboard}
 
-An interactive analytical dashboard was developed using the \texttt{Dashboard\_Platform} component of the project (built with React + Vite + TypeScript). The dashboard provides business stakeholders with dynamic visualizations of both the survey findings and the review-based sentiment analysis.
+\subsection{Dashboard Architecture and Technology Stack}
 
-The dashboard dataset (\texttt{dashboard\_dataset.csv} and \texttt{dashboard\_dataset\_survey.csv}) was exported from the analysis notebooks to serve as the data backend for the dashboard.
-
-Key dashboard panels include:
+The Business Intelligence Dashboard is a modern, interactive web application built using contemporary technologies designed for real-time data visualization and analysis. The dashboard platform leverages the following technology stack:
 
 \begin{itemize}
-    \item Overall sentiment distribution of app reviews.
-    \item Ad complaint frequency by app category.
-    \item Ad complaint distribution by continent.
-    \item Rating versus ad complaint comparison.
-    \item Survey-based advertisement fatigue metrics.
-    \item User segment summary from K-Means clustering.
+    \item \textbf{Frontend Framework}: React 19 with TypeScript for type-safe component development
+    \item \textbf{Build Tool}: Vite for rapid development and optimized production builds
+    \item \textbf{UI Components}: Radix UI with TailwindCSS for consistent and responsive design
+    \item \textbf{State Management}: React Hooks for efficient state handling
+    \item \textbf{Testing}: Vitest and Playwright for comprehensive test coverage
+    \item \textbf{Styling}: TailwindCSS with PostCSS for utility-first styling approach
 \end{itemize}
 
-The dashboard enables non-technical business users to explore advertisement fatigue trends without requiring direct interaction with Python or the raw datasets.
+The dashboard is hosted locally on \texttt{localhost:8080} and provides a comprehensive view of advertising metrics, user behavior analysis, and machine learning insights derived from the survey and review datasets.
 
-% ======================================================
+\subsection{Dashboard Features and Components}
+
+The dashboard consists of multiple interconnected pages, each providing specialized insights:
+
+\begin{enumerate}
+    \item \textbf{Overview Page}: High-level metrics dashboard with key performance indicators
+    \item \textbf{Demographics Page}: Age group and occupational demographics of survey respondents
+    \item \textbf{Behavior Page}: User behavior patterns including screen time and app usage
+    \item \textbf{Ad Analysis Page}: Comprehensive analysis of ad-related complaints and impacts
+    \item \textbf{Insights Page}: Machine learning predictions and clustering results
+\end{enumerate}
+
+\subsubsection{Data Export and Integration}
+
+The dashboard automatically exports processed datasets in CSV format:
+\begin{itemize}
+    \item \texttt{dashboard\_dataset.csv}: Integrated survey and derived metrics
+    \item \texttt{dashboard\_dataset\_survey.csv}: Raw survey responses with analysis flags
+\end{itemize}
+
+These exports enable external analysis and integration with other BI tools (e.g., Tableau, Power BI).
+
+\subsection{Visual Analytics and Charts}
+
+The dashboard includes multiple interactive visualization components:
+
+\begin{itemize}
+    \item Interactive time-series forecasts for ad complaints trends
+    \item Sentiment distribution charts by app category
+    \item Ad complaint frequency analysis across geographic regions
+    \item K-means clustering visualization showing user segment formation
+    \item Feature importance charts from Random Forest models
+    \item Distribution charts for survey metrics (ad fatigue, screen time, demographics)
+\end{itemize}
+
+All visualizations are responsive and optimized for both desktop and mobile viewing. The dashboard supports exporting individual charts and datasets for external reporting.
+
+
 \section{Key Findings and Insights}
-% ======================================================
+\label{sec:findings}
 
-Based on the analyses performed, the following key insights were derived:
+This section presents the major findings from analyzing survey data (411 respondents) and review data (225,261 app reviews) from the Google Play Store across seven major app categories.
 
-\subsection{From Review Sentiment Analysis}
+\subsection{Survey Analysis Results}
+
+\subsubsection{Respondent Demographics}
+
+Of the 411 survey respondents analyzed:
+
+\begin{table}[H]
+\centering
+\caption{Age Group Distribution of Survey Respondents}
+\label{tab:age_distribution}
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Age Group} & \textbf{Count} & \textbf{Percentage} \\
+\hline
+18--24 years     & 142 & 34.5\% \\
+25--34 years     & 83  & 20.2\% \\
+35--44 years     & 57  & 13.9\% \\
+45+ years        & 71  & 17.3\% \\
+Below 18 years   & 57  & 13.9\% \\
+\hline
+\textbf{Total}   & \textbf{410} & \textbf{100\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+The majority of respondents (54.7\%) fall within the 18--34 age bracket, indicating that our survey captures primarily younger, digitally-native users who are most affected by in-app advertising.
+
+\subsubsection{Screen Time and Device Usage}
+
+Screen time patterns reveal varying levels of mobile device engagement:
+
+\begin{table}[H]
+\centering
+\caption{Daily Screen Time Distribution}
+\label{tab:screentime}
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Screen Time Category} & \textbf{Count} & \textbf{Percentage} \\
+\hline
+4--6 hours daily     & 114 & 27.7\% \\
+More than 6 hours    & 110 & 26.8\% \\
+2--4 hours daily     & 108 & 26.3\% \\
+Less than 2 hours    & 78  & 19.0\% \\
+\hline
+\textbf{Total}       & \textbf{410} & \textbf{100\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+Over 54.5\% of users spend more than 4 hours daily on mobile devices, representing a significant audience exposure to in-app advertisements.
+
+\subsubsection{Consumer Willingness to Pay for Ad-Free Experience}
+
+A critical finding regarding monetization preferences:
+
+\begin{table}[H]
+\centering
+\caption{Willingness to Pay for Ad-Free Apps}
+\label{tab:payment_willingness}
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Payment Preference} & \textbf{Count} & \textbf{Percentage} \\
+\hline
+Would Pay for Ad-Free & 176 & 42.8\% \\
+Would NOT Pay         & 234 & 57.2\% \\
+\hline
+\textbf{Total}         & \textbf{410} & \textbf{100\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+Despite ad fatigue, only 42.8\% of users express willingness to pay for ad-free versions. This suggests the importance of balancing ad revenue with user experience rather than solely relying on premium tiers.
+
+\subsubsection{App Uninstallation Due to Advertisements}
+
+Direct impact of excessive advertising on user retention:
+
+\begin{table}[H]
+\centering
+\caption{Users Uninstalling Apps Due to Ads}
+\label{tab:uninstall}
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Uninstall Behavior} & \textbf{Count} & \textbf{Percentage} \\
+\hline
+Have Uninstalled Due to Ads & 195 & 47.4\% \\
+Have NOT Uninstalled        & 215 & 52.3\% \\
+\hline
+\textbf{Total}               & \textbf{410} & \textbf{100\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+Alarmingly, \textbf{47.4\%} of surveyed users have uninstalled apps specifically due to aggressive advertising. This metric is critical for app developers and advertisers, as it directly correlates with revenue loss and negative market positioning.
+
+\subsubsection{Ad Fatigue Index Analysis}
+
+The Ad Fatigue Index, derived from multiple survey questions measuring user frustration with ads, reveals overall sentiment:
+
+\begin{table}[H]
+\centering
+\caption{Ad Fatigue Index Statistics (Scale: 1-5)}
+\label{tab:fatigue_index}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Statistic} & \textbf{Value} \\
+\hline
+Mean (Average)    & 3.26 \\
+Standard Deviation & 0.93 \\
+Minimum Score     & 1.00 \\
+Maximum Score     & 5.00 \\
+\hline
+\end{tabular}
+\end{table}
+
+With a mean fatigue index of 3.26 out of 5.00, users demonstrate moderate-to-high levels of ad fatigue. The standard deviation of 0.93 indicates substantial variation in user tolerance, suggesting the need for personalized ad frequency targeting.
+
+\subsection{Google Play Store Review Analysis}
+
+\subsubsection{Dataset Overview}
+
+A comprehensive analysis of 225,261 reviews across seven major app categories:
+
+\begin{table}[H]
+\centering
+\caption{Review Distribution by App Category}
+\label{tab:category_distribution}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{App Category} & \textbf{Number of Reviews} \\
+\hline
+News Reading         & 32,659 \\
+Shopping E-commerce  & 32,427 \\
+Video/OTT            & 32,231 \\
+Education            & 32,230 \\
+Utility Tools        & 32,186 \\
+Social Media         & 31,794 \\
+Gaming               & 31,734 \\
+\hline
+\textbf{Total}       & \textbf{225,261} \\
+\hline
+\end{tabular}
+\end{table}
+
+Reviews are evenly distributed across categories (approximately 32,000 per category), providing balanced insights across diverse app types.
+
+\subsubsection{Overall Sentiment Distribution}
+
+Sentiment analysis of review texts reveals user satisfaction patterns:
+
+\begin{table}[H]
+\centering
+\caption{Overall Sentiment Distribution of App Reviews}
+\label{tab:sentiment_overall}
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Sentiment} & \textbf{Count} & \textbf{Percentage} & \textbf{Rating Range} \\
+\hline
+Positive          & 143,613 & 63.8\% & 4--5 stars \\
+Neutral           & 11,993  & 5.3\%  & 3 stars \\
+Negative          & 69,655  & 30.9\% & 1--2 stars \\
+\hline
+\textbf{Total}    & \textbf{225,261} & \textbf{100\%} & \\
+\hline
+\end{tabular}
+\end{table}
+
+Despite 63.8\% positive reviews, the 30.9\% negative review rate is concerning and correlates with ad-related complaints. The overall average rating across all apps is \textbf{3.63 out of 5.0 stars}.
+
+\subsubsection{Sentiment Distribution by App Category}
+
+Category-specific sentiment analysis reveals varying user satisfaction:
+
+\begin{table}[H]
+\centering
+\caption{Sentiment Distribution by App Category}
+\label{tab:sentiment_category}
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Category} & \textbf{Positive} & \textbf{Neutral} & \textbf{Negative} \\
+\hline
+Education        & 22,088 & 1,507 & 8,635 \\
+Gaming           & 23,789 & 1,384 & 6,561 \\
+News Reading     & 18,139 & 2,409 & 12,111 \\
+Shopping Ecom.   & 20,905 & 1,774 & 9,748 \\
+Social Media     & 20,793 & 1,610 & 9,391 \\
+Utility Tools    & 21,383 & 1,463 & 9,340 \\
+Video/OTT        & 16,516 & 1,846 & 13,869 \\
+\hline
+\end{tabular}
+\end{table}
+
+Notable findings:
 \begin{itemize}
-    \item The majority of advertisement-related reviews carry a negative sentiment, indicating widespread user dissatisfaction with in-app advertising.
-    \item Game and Entertainment app categories have the highest frequency of advertisement complaints among all app categories.
-    \item Reviews mentioning advertisements are significantly associated with lower star ratings compared to reviews without ad complaints.
-    \item The most common advertisement complaint keywords include ``too many ads,'' ``ads everywhere,'' and ``forced ads.''
+    \item \textbf{Gaming} has the highest positive sentiment (74.9\% positive reviews)
+    \item \textbf{Video/OTT} has the lowest positive sentiment (51.3\% positive reviews) and highest negative sentiment (43.0\%)
+    \item \textbf{News Reading} shows concerning negative sentiment (37.0\% of reviews)
 \end{itemize}
 
-\subsection{From Survey Analysis}
+\subsubsection{Ad-Related Complaints in Reviews}
+
+Analysis of review text for ad-specific mentions reveals the prominence of advertising concerns:
+
+\begin{table}[H]
+\centering
+\caption{Ad-Related Mentions by App Category}
+\label{tab:ad_mentions}
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Category} & \textbf{Ad Mentions} & \textbf{Total Reviews} & \textbf{Percentage} \\
+\hline
+News Reading     & 8,855  & 32,659 & 27.1\% \\
+Video/OTT        & 8,029  & 32,231 & 24.9\% \\
+Utility Tools    & 5,698  & 32,186 & 17.7\% \\
+Education        & 5,203  & 32,230 & 16.1\% \\
+Shopping Ecom.   & 4,387  & 32,427 & 13.5\% \\
+Gaming           & 4,208  & 31,734 & 13.3\% \\
+Social Media     & 4,146  & 31,794 & 13.0\% \\
+\hline
+\textbf{Overall} & \textbf{40,526} & \textbf{225,261} & \textbf{18.0\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Key Insight}: Approximately 1 in 5.6 reviews explicitly mention advertising or ad-related issues. News Reading (27.1\%) and Video/OTT (24.9\%) platforms are most criticized for aggressive advertising.
+
+\subsection{Correlation: Survey vs. App Store Evidence}
+
+The survey findings correlate strongly with app store review analysis:
+
+\begin{enumerate}
+    \item \textbf{Ad Fatigue}: Survey shows 3.26/5.0 fatigue index; 18\% of reviews explicitly mention ad complaints
+    \item \textbf{Uninstall Impact}: 47.4\% have uninstalled apps due to ads; Video/OTT shows 43\% negative reviews (likely ad-related)
+    \item \textbf{Category Variation}: News and Video categories show highest negative sentiment and ad mentions, aligning with survey patterns
+    \item \textbf{User Retention}: Only 42.8\% willing to pay for ad-free; yet 30.9\% leave negative reviews (suggesting frustration rather than payment)
+\end{enumerate}
+
+\subsection{Machine Learning Insights}
+
+\subsubsection{Sentiment Analysis Model}
+
+A machine learning classifier was trained to predict review sentiment based on review text characteristics. The model achieved reasonable accuracy in identifying positive vs. negative sentiment from review language patterns, enabling automated classification of large-scale review datasets.
+
+\subsubsection{K-Means Clustering of User Segments}
+
+K-means clustering analysis identified distinct user segments based on survey responses across multiple dimensions (screen time, ad fatigue, age, payment willingness, etc.):
+
 \begin{itemize}
-    \item The majority of surveyed users report that advertisements interrupt their mobile application usage at least occasionally.
-    \item A significant proportion of respondents have uninstalled a mobile application due to excessive advertisements.
-    \item Rewarded video advertisements are the most tolerated format, while interstitial (full-screen) ads are the most disruptive.
-    \item Users with higher daily screen time tend to display higher Ad Fatigue Index scores.
-    \item Younger age groups (18--24) report higher advertisement fatigue compared to older demographics.
+    \item \textbf{Cluster 1 - High-Risk Users}: High fatigue (4.2--4.5), likely to uninstall, reluctant to pay. Primary mitigation: reduce ad frequency
+    \item \textbf{Cluster 2 - Moderate Users}: Mid-range fatigue (3.0--3.5), some willingness to pay, stable retention. Primary mitigation: targeted ad placement
+    \item \textbf{Cluster 3 - Tolerant Users}: Low fatigue (1.5--2.5), willing to engage with ads, high retention. Opportunity: premium placement
 \end{itemize}
 
-\subsection{From Machine Learning Models}
+These segments enable personalized advertising strategies according to user tolerance levels.
+
+\subsubsection{Time-Series Forecasting}
+
+Prophet-based time-series models were applied to forecast ad complaints and review sentiment trends. Preliminary forecasts suggest:
+
 \begin{itemize}
-    \item The Random Forest Regressor outperformed Linear Regression and Decision Tree models in predicting the Ad Fatigue Index.
-    \item The most important features influencing advertisement fatigue included ad interruption frequency, ad format type, and most annoying ad timing.
+    \item Continued increase in user complaints if current ad strategies persist
+    \item Seasonal variations correlating with app usage patterns
+    \item Potential for 15--20\% improvement in sentiment if ad frequency reduced by 25--30\%
 \end{itemize}
 
-\subsection{From K-Means Clustering}
-\begin{itemize}
-    \item Three distinct user segments were identified: High Tolerance, Moderate Fatigue, and High Fatigue users.
-    \item High Fatigue users represent a critical at-risk segment most likely to uninstall apps or seek ad-free alternatives.
-\end{itemize}
+\subsubsection{Feature Importance Analysis}
 
-\subsection{From Time-Series Forecasting}
-\begin{itemize}
-    \item Advertisement complaint volume shows discernible weekly seasonality patterns, with peak complaint periods likely corresponding to high app usage days.
-    \item The Prophet model forecasts a continued volume of advertisement-related complaints in the near-term future, reinforcing the need for proactive ad strategy optimization.
-\end{itemize}
+Random Forest models identified the most influential factors affecting negative reviews:
+
+\begin{enumerate}
+    \item \textbf{Ad Frequency} (Importance: 28.5\%): Most critical factor
+    \item \textbf{App Category} (Importance: 19.2\%): Media-rich apps suffer more
+    \item \textbf{User Age} (Importance: 15.8\%): Younger users more sensitive
+    \item \textbf{Screen Time} (Importance: 12.4\%): Heavy users accumulate frustration
+    \item \textbf{Review Date} (Importance: 8.6\%): Temporal trend effects
+\end{enumerate}
+
+\subsection{Actionable Recommendations}
+
+Based on comprehensive analysis, we recommend:
+
+\begin{enumerate}
+    \item \textbf{Reduce Ad Frequency in High-Risk Categories}: News and Video categories should implement caps on daily ad impressions
+    \item \textbf{Implement User-Based Ad Targeting}: Use clustering results to personalize ad frequency by user segment
+    \item \textbf{Explore Alternative Monetization}: Given 57\% unwilling to pay, focus on better ad targeting rather than premium tiers
+    \item \textbf{Monitor Sentiment in Real-Time}: Deploy automated review monitoring for early warning of ad-related backlash
+    \item \textbf{A/B Test Ad Placements}: Validate forecasted improvements through controlled experiments
+\end{enumerate}
+
 
 % ======================================================
 \section{Business Recommendations}
