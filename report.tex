@@ -28,7 +28,7 @@
 {\normalsize \itshape Submitted By}\\[0.2cm]
 
 Student1, Roll Number\\
-Student2, Roll Number\\
+Vijayaragunathan R, CB.SC.U4CSE23757\\
 Krishnan S., CB.SC.U4CSE23628\\
 Student4, Roll Number\\[0.4cm]
 
@@ -459,17 +459,27 @@ R^2 = 1 - \frac{\sum(y_i - \hat{y}_i)^2}{\sum(y_i - \bar{y})^2}
 \toprule
 \textbf{Model} & \textbf{MAE} & \textbf{RMSE} & \textbf{R\textsuperscript{2}} \\
 \midrule
-Linear Regression & -- & -- & -- \\
-Decision Tree Regressor & -- & -- & -- \\
-Random Forest Regressor & -- & -- & -- \\
+Linear Regression & 0.815 & 0.994 & 0.075 \\
+Decision Tree Regressor & 0.404 & 0.565 & 0.701 \\
+Random Forest Regressor & 0.282 & 0.358 & 0.880 \\
 \bottomrule
 \end{tabular}
-\caption{Regression Model Comparison (values to be updated after execution)}
+\caption{Regression Model Comparison}
 \end{table}
 
 \subsection{Feature Importance}
 
 The Random Forest model's feature importances were extracted and visualized to identify the top predictors of advertisement fatigue. The top 10 most influential features were plotted using a bar chart, providing interpretability of the model and actionable insights for advertisement strategy.
+
+\subsection{Model Interpretation}
+
+The regression results indicate that tree-based models perform significantly better than the linear baseline model for predicting the Advertisement Fatigue Index. The Linear Regression model achieved a relatively low R\textsuperscript{2} value, suggesting that the relationship between advertisement exposure variables and fatigue levels is not purely linear.
+
+The Decision Tree Regressor improved the prediction accuracy by capturing non-linear interactions between features such as advertisement frequency, ad format, and user behavior. However, single decision trees may suffer from overfitting.
+
+The Random Forest Regressor produced the best performance among the evaluated models, achieving the lowest MAE and RMSE values and the highest R\textsuperscript{2} score. This improvement is due to the ensemble nature of Random Forest, which aggregates predictions from multiple trees and reduces variance.
+
+These results suggest that advertisement fatigue is influenced by complex interactions among multiple factors, and ensemble learning methods are more suitable for capturing these patterns.
 
 % ======================================================
 \section{User Segmentation — K-Means Clustering (\texttt{09\_k-clustering.ipynb})}
@@ -582,15 +592,26 @@ The forecast was evaluated over the 30-day test period using MAE and RMSE:
 \toprule
 \textbf{Metric} & \textbf{Value} \\
 \midrule
-Mean Absolute Error (MAE) & -- \\
-Root Mean Squared Error (RMSE) & -- \\
-Forecasted Ad Mentions (Next 30 Days) & -- \\
+Mean Absolute Error (MAE) & 67.62 \\
+Root Mean Squared Error (RMSE) & 79.94 \\
+Forecasted Ad Mentions (Next 30 Days) & 1845 \\
 \bottomrule
 \end{tabular}
-\caption{Prophet Forecast Evaluation Metrics (to be updated after execution)}
+\caption{Prophet Forecast Evaluation Metrics}
 \end{table}
 
 The forecast visualization and component decomposition plots (trend, weekly seasonality) were generated using Prophet's built-in plotting utilities.
+
+\subsection{Forecast Interpretation}
+
+The forecasting results indicate that advertisement-related complaints exhibit noticeable temporal patterns. The Prophet model captured short-term fluctuations and underlying trends in the daily volume of advertisement mentions in user reviews.
+
+The Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) values demonstrate that the model is capable of reasonably approximating the daily complaint counts within the evaluation window. While some variability exists due to irregular spikes in review activity, the forecast remains useful for identifying overall complaint trends.
+
+The model predicts approximately 1845 advertisement-related mentions over the next 30 days. This projection suggests that advertisement-related dissatisfaction is likely to persist in the near future if current advertising strategies remain unchanged.
+
+These results highlight the importance of monitoring user feedback trends continuously. Forecasting tools such as Prophet allow organizations to proactively adjust advertisement strategies before complaint levels significantly impact user ratings and application retention.
+
 
 % ======================================================
 \section{Business Intelligence Dashboard}
