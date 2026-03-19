@@ -62,7 +62,7 @@ export default function AdAnalysisPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis dataKey="name" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 11 }} angle={-15} textAnchor="end" height={55} />
                 <YAxis tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Legend wrapperStyle={{ fontSize: 11, color: "hsl(220, 10%, 55%)" }} />
                 <Bar dataKey="encountered" name="Frequently Seen" fill="hsl(340, 80%, 60%)" radius={[4, 4, 0, 0]} fillOpacity={0.8} />
                 <Bar dataKey="tolerated" name="Users Tolerate" fill="hsl(170, 75%, 50%)" radius={[4, 4, 0, 0]} fillOpacity={0.8} />
@@ -76,7 +76,7 @@ export default function AdAnalysisPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis dataKey="name" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 11 }} angle={-20} textAnchor="end" height={60} />
                 <YAxis tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Bar dataKey="value" radius={[6, 6, 0, 0]}>
                   {adFormatData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                 </Bar>
@@ -90,7 +90,7 @@ export default function AdAnalysisPage() {
                 <Pie data={toleratedData} cx="50%" cy="50%" innerRadius={55} outerRadius={105} paddingAngle={3} dataKey="value" label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}>
                   {toleratedData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                 </Pie>
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
               </PieChart>
             </ResponsiveContainer>
           </ChartCard>
@@ -101,7 +101,7 @@ export default function AdAnalysisPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis type="number" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
                 <YAxis dataKey="name" type="category" width={130} tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 11 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Bar dataKey="value" radius={[0, 6, 6, 0]} fill="hsl(340, 80%, 60%)" />
               </BarChart>
             </ResponsiveContainer>
@@ -113,7 +113,7 @@ export default function AdAnalysisPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis dataKey="name" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
                 <YAxis tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Area type="monotone" dataKey="value" stroke="hsl(250, 85%, 65%)" fill="hsl(250, 85%, 65%)" fillOpacity={0.2} />
               </AreaChart>
             </ResponsiveContainer>
@@ -125,7 +125,7 @@ export default function AdAnalysisPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis dataKey="name" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 11 }} angle={-15} textAnchor="end" height={60} />
                 <YAxis domain={[0, 5]} tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Bar dataKey="value" radius={[6, 6, 0, 0]} fill="hsl(170, 75%, 50%)" />
               </BarChart>
             </ResponsiveContainer>

@@ -26,7 +26,7 @@ import {
   CalendarDays,
   Activity
 } from "lucide-react";
-import AnimatedSection from "@/components/AnimatedSection";
+import { AnimatedSection } from "@/components/AnimatedSection";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 

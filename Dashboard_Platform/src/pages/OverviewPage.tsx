@@ -86,7 +86,7 @@ export default function OverviewPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis dataKey="name" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
                 <YAxis tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Bar dataKey="value" radius={[6, 6, 0, 0]}>
                   {adFreqData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                 </Bar>
@@ -100,7 +100,7 @@ export default function OverviewPage() {
                 <Pie data={smartphoneData} cx="50%" cy="50%" innerRadius={60} outerRadius={100} paddingAngle={4} dataKey="value" label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}>
                   {smartphoneData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                 </Pie>
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
               </PieChart>
             </ResponsiveContainer>
           </ChartCard>
@@ -111,7 +111,7 @@ export default function OverviewPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis type="number" domain={[0, 5]} tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
                 <YAxis dataKey="name" type="category" width={80} tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Bar dataKey="value" radius={[0, 6, 6, 0]} fill="hsl(170, 75%, 50%)" />
               </BarChart>
             </ResponsiveContainer>
@@ -138,7 +138,7 @@ export default function OverviewPage() {
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
               <XAxis type="number" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
               <YAxis dataKey="metric" type="category" width={120} tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 11 }} />
-              <Tooltip contentStyle={tooltipStyle} />
+              <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
               {likertOrder.map((level, i) => (
                 <Bar key={level} dataKey={level} stackId="a" fill={[
                   "hsl(170, 75%, 50%)", "hsl(170, 60%, 40%)", "hsl(220, 15%, 35%)", "hsl(35, 95%, 60%)", "hsl(0, 72%, 55%)"

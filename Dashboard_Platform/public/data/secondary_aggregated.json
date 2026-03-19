@@ -1,0 +1,3699 @@
+{
+  "overview": {
+    "totalReviews": 225261,
+    "totalAdMentions": 39723,
+    "adMentionRate": "17.6"
+  },
+  "sentimentDistribution": [
+    {
+      "name": "Positive",
+      "value": 144159,
+      "fill": "#10b981"
+    },
+    {
+      "name": "Neutral",
+      "value": 46704,
+      "fill": "#64748b"
+    },
+    {
+      "name": "Negative",
+      "value": 34398,
+      "fill": "#ef4444"
+    }
+  ],
+  "adSentimentDistribution": [
+    {
+      "name": "Positive",
+      "value": 18566,
+      "fill": "#10b981"
+    },
+    {
+      "name": "Neutral",
+      "value": 7753,
+      "fill": "#64748b"
+    },
+    {
+      "name": "Negative",
+      "value": 13404,
+      "fill": "#ef4444"
+    }
+  ],
+  "categoryMetrics": [
+    {
+      "name": "News_Reading",
+      "totalReviews": 32659,
+      "adMentions": 8624,
+      "adMentionRate": 26.4,
+      "avgRatingAll": 3.37,
+      "avgRatingWithAds": 2.62,
+      "avgRatingWithoutAds": 3.64,
+      "ratingDrop": 1.02,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 19976,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 7150,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 5533,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 4862,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 1254,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 2508,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Video_OTT",
+      "totalReviews": 32231,
+      "adMentions": 7908,
+      "adMentionRate": 24.5,
+      "avgRatingAll": 3.17,
+      "avgRatingWithAds": 1.9,
+      "avgRatingWithoutAds": 3.58,
+      "ratingDrop": 1.68,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 19044,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 7775,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 5412,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 3587,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 1769,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 2552,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Utility_Tools",
+      "totalReviews": 32186,
+      "adMentions": 5610,
+      "adMentionRate": 17.4,
+      "avgRatingAll": 3.73,
+      "avgRatingWithAds": 1.86,
+      "avgRatingWithoutAds": 4.12,
+      "ratingDrop": 2.26,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 22175,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 6315,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 3696,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2519,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 1133,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1958,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "totalReviews": 32230,
+      "adMentions": 5126,
+      "adMentionRate": 15.9,
+      "avgRatingAll": 3.78,
+      "avgRatingWithAds": 2.82,
+      "avgRatingWithoutAds": 3.97,
+      "ratingDrop": 1.15,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 21307,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 6710,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 4213,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2552,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 902,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1672,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Shopping_Ecommerce",
+      "totalReviews": 32427,
+      "adMentions": 4332,
+      "adMentionRate": 13.4,
+      "avgRatingAll": 3.66,
+      "avgRatingWithAds": 2.14,
+      "avgRatingWithoutAds": 3.89,
+      "ratingDrop": 1.75,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 21412,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 6942,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 4073,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1606,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 1276,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1450,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Gaming",
+      "totalReviews": 31734,
+      "adMentions": 4153,
+      "adMentionRate": 13.1,
+      "avgRatingAll": 4.04,
+      "avgRatingWithAds": 2.77,
+      "avgRatingWithoutAds": 4.23,
+      "ratingDrop": 1.46,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 19670,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 4558,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 7506,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1590,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 583,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1980,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Social Media",
+      "totalReviews": 31794,
+      "adMentions": 3970,
+      "adMentionRate": 12.5,
+      "avgRatingAll": 3.69,
+      "avgRatingWithAds": 2.48,
+      "avgRatingWithoutAds": 3.86,
+      "ratingDrop": 1.38,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 20575,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 7254,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 3965,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1850,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 836,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1284,
+          "fill": "#ef4444"
+        }
+      ]
+    }
+  ],
+  "continentMetrics": [
+    {
+      "name": "North America",
+      "totalReviews": 40959,
+      "adMentions": 7219,
+      "adMentionRate": 17.6,
+      "avgRatingAll": 3.63,
+      "avgRatingWithAds": 2.35,
+      "avgRatingWithoutAds": 3.91,
+      "ratingDrop": 1.56,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 26211,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 8495,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 6253,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 3375,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 1410,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 2434,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Europe",
+      "totalReviews": 61438,
+      "adMentions": 10837,
+      "adMentionRate": 17.6,
+      "avgRatingAll": 3.63,
+      "avgRatingWithAds": 2.35,
+      "avgRatingWithoutAds": 3.91,
+      "ratingDrop": 1.56,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 39313,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 12738,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 9387,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 5065,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 2115,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 3657,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Asia",
+      "totalReviews": 61430,
+      "adMentions": 10833,
+      "adMentionRate": 17.6,
+      "avgRatingAll": 3.63,
+      "avgRatingWithAds": 2.35,
+      "avgRatingWithoutAds": 3.91,
+      "ratingDrop": 1.56,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 39319,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 12733,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 9378,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 5064,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 2113,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 3656,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "South America",
+      "totalReviews": 20480,
+      "adMentions": 3612,
+      "adMentionRate": 17.6,
+      "avgRatingAll": 3.63,
+      "avgRatingWithAds": 2.35,
+      "avgRatingWithoutAds": 3.91,
+      "ratingDrop": 1.56,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 13104,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 4247,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 3129,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1688,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 705,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1219,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Africa",
+      "totalReviews": 20474,
+      "adMentions": 3610,
+      "adMentionRate": 17.6,
+      "avgRatingAll": 3.63,
+      "avgRatingWithAds": 2.35,
+      "avgRatingWithoutAds": 3.91,
+      "ratingDrop": 1.56,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 13106,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 4243,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 3125,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1686,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 705,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1219,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Oceania",
+      "totalReviews": 20480,
+      "adMentions": 3612,
+      "adMentionRate": 17.6,
+      "avgRatingAll": 3.63,
+      "avgRatingWithAds": 2.35,
+      "avgRatingWithoutAds": 3.91,
+      "ratingDrop": 1.56,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 13106,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 4248,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 3126,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1688,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 705,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1219,
+          "fill": "#ef4444"
+        }
+      ]
+    }
+  ],
+  "appMetrics": [
+    {
+      "name": "Weather",
+      "totalReviews": 3300,
+      "adMentions": 2761,
+      "adMentionRate": 83.7,
+      "avgRatingAll": 1.58,
+      "avgRatingWithAds": 1.31,
+      "avgRatingWithoutAds": 2.96,
+      "ratingDrop": 1.65,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1551,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 550,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1199,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1287,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 418,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1056,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "SonyLIV",
+      "totalReviews": 3245,
+      "adMentions": 1485,
+      "adMentionRate": 45.8,
+      "avgRatingAll": 2.21,
+      "avgRatingWithAds": 1.24,
+      "avgRatingWithoutAds": 3.04,
+      "ratingDrop": 1.8,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1518,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 638,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1089,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 484,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 242,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 759,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "SmartNews",
+      "totalReviews": 3289,
+      "adMentions": 1496,
+      "adMentionRate": 45.5,
+      "avgRatingAll": 3.23,
+      "avgRatingWithAds": 2.49,
+      "avgRatingWithoutAds": 3.84,
+      "ratingDrop": 1.35,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2189,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 539,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 561,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 946,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 198,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 352,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Pocket",
+      "totalReviews": 3267,
+      "adMentions": 1221,
+      "adMentionRate": 37.4,
+      "avgRatingAll": 2.7,
+      "avgRatingWithAds": 2.65,
+      "avgRatingWithoutAds": 2.73,
+      "ratingDrop": 0.08,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1694,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 814,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 759,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 693,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 209,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 319,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Amazon_Prime",
+      "totalReviews": 3278,
+      "adMentions": 1166,
+      "adMentionRate": 35.6,
+      "avgRatingAll": 2.68,
+      "avgRatingWithAds": 1.76,
+      "avgRatingWithoutAds": 3.18,
+      "ratingDrop": 1.42,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1991,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 781,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 506,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 627,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 297,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 242,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Feedly",
+      "totalReviews": 3289,
+      "adMentions": 1166,
+      "adMentionRate": 35.5,
+      "avgRatingAll": 3.34,
+      "avgRatingWithAds": 3.42,
+      "avgRatingWithoutAds": 3.3,
+      "ratingDrop": -0.12,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2123,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 550,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 616,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 770,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 88,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 308,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Disney_Plus",
+      "totalReviews": 3289,
+      "adMentions": 1067,
+      "adMentionRate": 32.4,
+      "avgRatingAll": 2.4,
+      "avgRatingWithAds": 1.76,
+      "avgRatingWithoutAds": 2.71,
+      "ratingDrop": 0.95,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1584,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 957,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 748,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 495,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 275,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 297,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "NYTimes",
+      "totalReviews": 3289,
+      "adMentions": 1034,
+      "adMentionRate": 31.4,
+      "avgRatingAll": 3.45,
+      "avgRatingWithAds": 2.56,
+      "avgRatingWithoutAds": 3.86,
+      "ratingDrop": 1.3,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1969,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 660,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 660,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 627,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 121,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 286,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Shopee",
+      "totalReviews": 3278,
+      "adMentions": 1023,
+      "adMentionRate": 31.2,
+      "avgRatingAll": 2.92,
+      "avgRatingWithAds": 2.05,
+      "avgRatingWithoutAds": 3.31,
+      "ratingDrop": 1.26,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 913,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 2167,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 198,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 143,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 759,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 121,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "CNN",
+      "totalReviews": 3289,
+      "adMentions": 990,
+      "adMentionRate": 30.1,
+      "avgRatingAll": 2.58,
+      "avgRatingWithAds": 1.59,
+      "avgRatingWithoutAds": 3,
+      "ratingDrop": 1.41,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1661,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 891,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 737,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 462,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 176,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 352,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "AliExpress",
+      "totalReviews": 3245,
+      "adMentions": 891,
+      "adMentionRate": 27.5,
+      "avgRatingAll": 2.3,
+      "avgRatingWithAds": 1.58,
+      "avgRatingWithoutAds": 2.57,
+      "ratingDrop": 0.99,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1507,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 660,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1078,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 352,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 132,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 407,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Khan_Academy",
+      "totalReviews": 3223,
+      "adMentions": 869,
+      "adMentionRate": 27,
+      "avgRatingAll": 4.16,
+      "avgRatingWithAds": 4.1,
+      "avgRatingWithoutAds": 4.19,
+      "ratingDrop": 0.09,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2277,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 594,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 352,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 583,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 99,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 187,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Plex",
+      "totalReviews": 3278,
+      "adMentions": 825,
+      "adMentionRate": 25.2,
+      "avgRatingAll": 2.96,
+      "avgRatingWithAds": 2.28,
+      "avgRatingWithoutAds": 3.19,
+      "ratingDrop": 0.91,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1881,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 814,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 583,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 451,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 132,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 242,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Vimeo",
+      "totalReviews": 3234,
+      "adMentions": 781,
+      "adMentionRate": 24.1,
+      "avgRatingAll": 2.48,
+      "avgRatingWithAds": 1.55,
+      "avgRatingWithoutAds": 2.78,
+      "ratingDrop": 1.23,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1430,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 891,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 913,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 231,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 187,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 363,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Coursera",
+      "totalReviews": 3234,
+      "adMentions": 737,
+      "adMentionRate": 22.8,
+      "avgRatingAll": 3.14,
+      "avgRatingWithAds": 2.27,
+      "avgRatingWithoutAds": 3.4,
+      "ratingDrop": 1.13,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1991,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 572,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 671,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 374,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 99,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 264,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Udemy",
+      "totalReviews": 3256,
+      "adMentions": 737,
+      "adMentionRate": 22.6,
+      "avgRatingAll": 3.69,
+      "avgRatingWithAds": 2.37,
+      "avgRatingWithoutAds": 4.07,
+      "ratingDrop": 1.7,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2178,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 583,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 495,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 352,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 165,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 220,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Inshorts",
+      "totalReviews": 3245,
+      "adMentions": 660,
+      "adMentionRate": 20.3,
+      "avgRatingAll": 4.2,
+      "avgRatingWithAds": 3.22,
+      "avgRatingWithoutAds": 4.46,
+      "ratingDrop": 1.24,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2431,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 495,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 319,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 374,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 99,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 187,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Dropbox",
+      "totalReviews": 3278,
+      "adMentions": 638,
+      "adMentionRate": 19.5,
+      "avgRatingAll": 3.24,
+      "avgRatingWithAds": 1.95,
+      "avgRatingWithoutAds": 3.55,
+      "ratingDrop": 1.6,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2024,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 671,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 583,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 264,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 121,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 253,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Clash_Royale",
+      "totalReviews": 3201,
+      "adMentions": 616,
+      "adMentionRate": 19.2,
+      "avgRatingAll": 3.04,
+      "avgRatingWithAds": 2.2,
+      "avgRatingWithoutAds": 3.25,
+      "ratingDrop": 1.05,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1584,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 572,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1045,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 187,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 44,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 385,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Hotstar",
+      "totalReviews": 3212,
+      "adMentions": 594,
+      "adMentionRate": 18.5,
+      "avgRatingAll": 3.57,
+      "avgRatingWithAds": 1.69,
+      "avgRatingWithoutAds": 3.99,
+      "ratingDrop": 2.3,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2156,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 627,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 429,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 253,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 154,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 187,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Netflix",
+      "totalReviews": 3212,
+      "adMentions": 583,
+      "adMentionRate": 18.2,
+      "avgRatingAll": 3.11,
+      "avgRatingWithAds": 2.3,
+      "avgRatingWithoutAds": 3.29,
+      "ratingDrop": 0.99,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1859,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 770,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 583,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 286,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 132,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 165,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Reddit",
+      "totalReviews": 3278,
+      "adMentions": 583,
+      "adMentionRate": 17.8,
+      "avgRatingAll": 3.14,
+      "avgRatingWithAds": 1.68,
+      "avgRatingWithoutAds": 3.46,
+      "ratingDrop": 1.78,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2035,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 583,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 660,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 220,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 99,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 264,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Amazon",
+      "totalReviews": 3223,
+      "adMentions": 572,
+      "adMentionRate": 17.7,
+      "avgRatingAll": 2.87,
+      "avgRatingWithAds": 1.94,
+      "avgRatingWithoutAds": 3.07,
+      "ratingDrop": 1.13,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1650,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 891,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 682,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 242,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 110,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 220,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "MX_Player",
+      "totalReviews": 3136,
+      "adMentions": 549,
+      "adMentionRate": 17.5,
+      "avgRatingAll": 4,
+      "avgRatingWithAds": 2.32,
+      "avgRatingWithoutAds": 4.36,
+      "ratingDrop": 2.04,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2456,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 548,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 132,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 287,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 163,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 99,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Byjus",
+      "totalReviews": 3245,
+      "adMentions": 550,
+      "adMentionRate": 16.9,
+      "avgRatingAll": 2.51,
+      "avgRatingWithAds": 1.54,
+      "avgRatingWithoutAds": 2.7,
+      "ratingDrop": 1.16,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1221,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 1133,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 891,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 77,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 121,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 352,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Google_News",
+      "totalReviews": 3267,
+      "adMentions": 550,
+      "adMentionRate": 16.8,
+      "avgRatingAll": 3.61,
+      "avgRatingWithAds": 2.36,
+      "avgRatingWithoutAds": 3.86,
+      "ratingDrop": 1.5,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2057,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 759,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 451,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 242,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 99,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 209,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Google_Classroom",
+      "totalReviews": 3212,
+      "adMentions": 539,
+      "adMentionRate": 16.8,
+      "avgRatingAll": 3.48,
+      "avgRatingWithAds": 2.43,
+      "avgRatingWithoutAds": 3.69,
+      "ratingDrop": 1.26,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1892,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 836,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 484,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 209,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 121,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 209,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "BBC_News",
+      "totalReviews": 3289,
+      "adMentions": 550,
+      "adMentionRate": 16.7,
+      "avgRatingAll": 3.02,
+      "avgRatingWithAds": 2,
+      "avgRatingWithoutAds": 3.22,
+      "ratingDrop": 1.22,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1496,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 1100,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 693,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 132,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 154,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 264,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Call_of_Duty",
+      "totalReviews": 3245,
+      "adMentions": 539,
+      "adMentionRate": 16.6,
+      "avgRatingAll": 3.87,
+      "avgRatingWithAds": 2.67,
+      "avgRatingWithoutAds": 4.11,
+      "ratingDrop": 1.44,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2035,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 384,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 826,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 198,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 77,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 264,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Hill_Climb_Racing",
+      "totalReviews": 3125,
+      "adMentions": 517,
+      "adMentionRate": 16.5,
+      "avgRatingAll": 3.86,
+      "avgRatingWithAds": 2.26,
+      "avgRatingWithoutAds": 4.18,
+      "ratingDrop": 1.92,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1683,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 540,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 902,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 165,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 99,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 253,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Temple_Run",
+      "totalReviews": 3223,
+      "adMentions": 528,
+      "adMentionRate": 16.4,
+      "avgRatingAll": 4.1,
+      "avgRatingWithAds": 2.67,
+      "avgRatingWithoutAds": 4.38,
+      "ratingDrop": 1.71,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2046,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 374,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 803,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 264,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 44,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 220,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Medium",
+      "totalReviews": 3212,
+      "adMentions": 528,
+      "adMentionRate": 16.4,
+      "avgRatingAll": 4.09,
+      "avgRatingWithAds": 3.54,
+      "avgRatingWithoutAds": 4.19,
+      "ratingDrop": 0.65,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2343,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 594,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 275,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 352,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 55,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 121,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Discord",
+      "totalReviews": 3234,
+      "adMentions": 528,
+      "adMentionRate": 16.3,
+      "avgRatingAll": 3.12,
+      "avgRatingWithAds": 1.96,
+      "avgRatingWithoutAds": 3.35,
+      "ratingDrop": 1.39,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1826,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 825,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 583,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 187,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 121,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 220,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Threads",
+      "totalReviews": 3179,
+      "adMentions": 506,
+      "adMentionRate": 15.9,
+      "avgRatingAll": 3.69,
+      "avgRatingWithAds": 2.8,
+      "avgRatingWithoutAds": 3.85,
+      "ratingDrop": 1.05,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2211,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 616,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 352,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 231,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 110,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 165,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Among_Us",
+      "totalReviews": 3267,
+      "adMentions": 506,
+      "adMentionRate": 15.5,
+      "avgRatingAll": 3.78,
+      "avgRatingWithAds": 3.09,
+      "avgRatingWithoutAds": 3.9,
+      "ratingDrop": 0.81,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1639,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 517,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 1111,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 198,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 55,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 253,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "eBay",
+      "totalReviews": 3278,
+      "adMentions": 484,
+      "adMentionRate": 14.8,
+      "avgRatingAll": 3.2,
+      "avgRatingWithAds": 2.05,
+      "avgRatingWithoutAds": 3.4,
+      "ratingDrop": 1.35,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2046,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 616,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 616,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 176,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 88,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 220,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "LinkedIn",
+      "totalReviews": 3245,
+      "adMentions": 462,
+      "adMentionRate": 14.2,
+      "avgRatingAll": 3.14,
+      "avgRatingWithAds": 1.71,
+      "avgRatingWithoutAds": 3.38,
+      "ratingDrop": 1.67,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1859,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 682,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 704,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 187,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 55,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 220,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Tubi",
+      "totalReviews": 3256,
+      "adMentions": 462,
+      "adMentionRate": 14.2,
+      "avgRatingAll": 4.54,
+      "avgRatingWithAds": 3.62,
+      "avgRatingWithoutAds": 4.7,
+      "ratingDrop": 1.08,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2794,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 308,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 154,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 352,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 44,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 66,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "TikTok",
+      "totalReviews": 3113,
+      "adMentions": 440,
+      "adMentionRate": 14.1,
+      "avgRatingAll": 3.87,
+      "avgRatingWithAds": 3.13,
+      "avgRatingWithoutAds": 4,
+      "ratingDrop": 0.87,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1826,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 957,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 330,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 209,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 154,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 77,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Photomath",
+      "totalReviews": 3135,
+      "adMentions": 429,
+      "adMentionRate": 13.7,
+      "avgRatingAll": 3.62,
+      "avgRatingWithAds": 2.69,
+      "avgRatingWithoutAds": 3.77,
+      "ratingDrop": 1.08,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1793,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 825,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 517,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 187,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 88,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 154,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Quora",
+      "totalReviews": 3223,
+      "adMentions": 429,
+      "adMentionRate": 13.3,
+      "avgRatingAll": 3.48,
+      "avgRatingWithAds": 2.38,
+      "avgRatingWithoutAds": 3.65,
+      "ratingDrop": 1.27,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2013,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 748,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 462,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 264,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 55,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 110,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Walmart",
+      "totalReviews": 3300,
+      "adMentions": 429,
+      "adMentionRate": 13,
+      "avgRatingAll": 3.88,
+      "avgRatingWithAds": 2.72,
+      "avgRatingWithoutAds": 4.06,
+      "ratingDrop": 1.34,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2134,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 748,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 418,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 209,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 88,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 132,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Pinterest",
+      "totalReviews": 3234,
+      "adMentions": 418,
+      "adMentionRate": 12.9,
+      "avgRatingAll": 4.32,
+      "avgRatingWithAds": 3.13,
+      "avgRatingWithoutAds": 4.5,
+      "ratingDrop": 1.37,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2585,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 517,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 132,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 319,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 66,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 33,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "YouTube",
+      "totalReviews": 3091,
+      "adMentions": 396,
+      "adMentionRate": 12.8,
+      "avgRatingAll": 3.76,
+      "avgRatingWithAds": 2.25,
+      "avgRatingWithoutAds": 3.98,
+      "ratingDrop": 1.73,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1375,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 1441,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 275,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 121,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 143,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 132,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Google_Maps",
+      "totalReviews": 3179,
+      "adMentions": 407,
+      "adMentionRate": 12.8,
+      "avgRatingAll": 3.4,
+      "avgRatingWithAds": 1.81,
+      "avgRatingWithoutAds": 3.63,
+      "ratingDrop": 1.82,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1881,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 781,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 517,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 121,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 77,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 209,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Google_Drive",
+      "totalReviews": 3179,
+      "adMentions": 407,
+      "adMentionRate": 12.8,
+      "avgRatingAll": 3.97,
+      "avgRatingWithAds": 2.51,
+      "avgRatingWithoutAds": 4.18,
+      "ratingDrop": 1.67,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2211,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 781,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 187,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 176,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 132,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 99,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Etsy",
+      "totalReviews": 3300,
+      "adMentions": 407,
+      "adMentionRate": 12.3,
+      "avgRatingAll": 4.45,
+      "avgRatingWithAds": 3.41,
+      "avgRatingWithoutAds": 4.6,
+      "ratingDrop": 1.19,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2728,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 330,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 242,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 297,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 11,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 99,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Adobe_Scan",
+      "totalReviews": 3245,
+      "adMentions": 363,
+      "adMentionRate": 11.2,
+      "avgRatingAll": 4.33,
+      "avgRatingWithAds": 2.55,
+      "avgRatingWithoutAds": 4.55,
+      "ratingDrop": 2,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2684,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 396,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 165,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 165,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 110,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 88,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Subway_Surfers",
+      "totalReviews": 3223,
+      "adMentions": 352,
+      "adMentionRate": 10.9,
+      "avgRatingAll": 4.57,
+      "avgRatingWithAds": 3.16,
+      "avgRatingWithoutAds": 4.74,
+      "ratingDrop": 1.58,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2354,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 198,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 671,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 187,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 22,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 143,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "edX",
+      "totalReviews": 3256,
+      "adMentions": 352,
+      "adMentionRate": 10.8,
+      "avgRatingAll": 4.31,
+      "avgRatingWithAds": 3.38,
+      "avgRatingWithoutAds": 4.43,
+      "ratingDrop": 1.05,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2684,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 418,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 154,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 231,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 66,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 55,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "SoloLearn",
+      "totalReviews": 3245,
+      "adMentions": 352,
+      "adMentionRate": 10.8,
+      "avgRatingAll": 4.29,
+      "avgRatingWithAds": 3.59,
+      "avgRatingWithoutAds": 4.38,
+      "ratingDrop": 0.79,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2585,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 451,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 209,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 242,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 33,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 77,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Gmail",
+      "totalReviews": 3201,
+      "adMentions": 341,
+      "adMentionRate": 10.7,
+      "avgRatingAll": 3.67,
+      "avgRatingWithAds": 2.39,
+      "avgRatingWithoutAds": 3.82,
+      "ratingDrop": 1.43,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2090,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 682,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 429,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 187,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 44,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 110,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Clash_of_Clans",
+      "totalReviews": 3212,
+      "adMentions": 330,
+      "adMentionRate": 10.3,
+      "avgRatingAll": 3.93,
+      "avgRatingWithAds": 2.9,
+      "avgRatingWithoutAds": 4.05,
+      "ratingDrop": 1.15,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1991,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 451,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 770,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 88,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 88,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 154,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "PUBG_Mobile",
+      "totalReviews": 3013,
+      "adMentions": 304,
+      "adMentionRate": 10.1,
+      "avgRatingAll": 4.34,
+      "avgRatingWithAds": 3.37,
+      "avgRatingWithoutAds": 4.45,
+      "ratingDrop": 1.08,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1753,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 740,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 520,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 95,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 88,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 121,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Twitter",
+      "totalReviews": 3201,
+      "adMentions": 317,
+      "adMentionRate": 9.9,
+      "avgRatingAll": 3.38,
+      "avgRatingWithAds": 3.15,
+      "avgRatingWithoutAds": 3.41,
+      "ratingDrop": 0.26,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1949,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 651,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 601,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 187,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 22,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 108,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Duolingo",
+      "totalReviews": 3201,
+      "adMentions": 297,
+      "adMentionRate": 9.3,
+      "avgRatingAll": 4.44,
+      "avgRatingWithAds": 3.41,
+      "avgRatingWithoutAds": 4.54,
+      "ratingDrop": 1.13,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2486,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 528,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 187,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 176,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 44,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 77,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Instagram",
+      "totalReviews": 3079,
+      "adMentions": 273,
+      "adMentionRate": 8.9,
+      "avgRatingAll": 3.99,
+      "avgRatingWithAds": 2.99,
+      "avgRatingWithoutAds": 4.09,
+      "ratingDrop": 1.1,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 1881,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 936,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 262,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 98,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 77,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 98,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Alibaba",
+      "totalReviews": 3223,
+      "adMentions": 275,
+      "adMentionRate": 8.5,
+      "avgRatingAll": 3.93,
+      "avgRatingWithAds": 2.16,
+      "avgRatingWithoutAds": 4.1,
+      "ratingDrop": 1.94,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2437,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 489,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 297,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 88,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 55,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 132,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Brainly",
+      "totalReviews": 3223,
+      "adMentions": 264,
+      "adMentionRate": 8.2,
+      "avgRatingAll": 4.2,
+      "avgRatingWithAds": 2.58,
+      "avgRatingWithoutAds": 4.35,
+      "ratingDrop": 1.77,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2200,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 770,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 253,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 121,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 66,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 77,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Free_Fire",
+      "totalReviews": 3002,
+      "adMentions": 241,
+      "adMentionRate": 8,
+      "avgRatingAll": 4.34,
+      "avgRatingWithAds": 3.01,
+      "avgRatingWithoutAds": 4.46,
+      "ratingDrop": 1.45,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2033,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 463,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 506,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 65,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 33,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 143,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Facebook",
+      "totalReviews": 3140,
+      "adMentions": 223,
+      "adMentionRate": 7.1,
+      "avgRatingAll": 4.1,
+      "avgRatingWithAds": 2.47,
+      "avgRatingWithoutAds": 4.22,
+      "ratingDrop": 1.75,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2115,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 871,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 154,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 124,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 44,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 55,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Snapchat",
+      "totalReviews": 3091,
+      "adMentions": 220,
+      "adMentionRate": 7.1,
+      "avgRatingAll": 4.16,
+      "avgRatingWithAds": 2.65,
+      "avgRatingWithoutAds": 4.28,
+      "ratingDrop": 1.63,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2288,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 616,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 187,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 88,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 88,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 44,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Candy_Crush",
+      "totalReviews": 3223,
+      "adMentions": 220,
+      "adMentionRate": 6.8,
+      "avgRatingAll": 4.58,
+      "avgRatingWithAds": 3.45,
+      "avgRatingWithoutAds": 4.67,
+      "ratingDrop": 1.22,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2552,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 319,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 352,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 143,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 33,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 44,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "CamScanner",
+      "totalReviews": 3278,
+      "adMentions": 220,
+      "adMentionRate": 6.7,
+      "avgRatingAll": 4.45,
+      "avgRatingWithAds": 2.5,
+      "avgRatingWithoutAds": 4.59,
+      "ratingDrop": 2.09,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2684,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 506,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 88,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 121,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 66,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 33,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Calculator",
+      "totalReviews": 3201,
+      "adMentions": 209,
+      "adMentionRate": 6.5,
+      "avgRatingAll": 4.01,
+      "avgRatingWithAds": 3.58,
+      "avgRatingWithoutAds": 4.04,
+      "ratingDrop": 0.46,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2024,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 935,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 242,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 110,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 66,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 33,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Truecaller",
+      "totalReviews": 3124,
+      "adMentions": 143,
+      "adMentionRate": 4.6,
+      "avgRatingAll": 4.35,
+      "avgRatingWithAds": 3,
+      "avgRatingWithoutAds": 4.41,
+      "ratingDrop": 1.41,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2617,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 375,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 132,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 33,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 55,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 55,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Files_Google",
+      "totalReviews": 3201,
+      "adMentions": 121,
+      "adMentionRate": 3.8,
+      "avgRatingAll": 4.33,
+      "avgRatingWithAds": 3.09,
+      "avgRatingWithoutAds": 4.38,
+      "ratingDrop": 1.29,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2409,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 638,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 154,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 55,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 44,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 22,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Meesho",
+      "totalReviews": 3179,
+      "adMentions": 110,
+      "adMentionRate": 3.5,
+      "avgRatingAll": 4.3,
+      "avgRatingWithAds": 2.2,
+      "avgRatingWithoutAds": 4.38,
+      "ratingDrop": 2.18,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2530,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 440,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 209,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 55,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 11,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 44,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Myntra",
+      "totalReviews": 3256,
+      "adMentions": 77,
+      "adMentionRate": 2.4,
+      "avgRatingAll": 4.57,
+      "avgRatingWithAds": 2.57,
+      "avgRatingWithoutAds": 4.62,
+      "ratingDrop": 2.05,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2822,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 231,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 203,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 22,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 11,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 44,
+          "fill": "#ef4444"
+        }
+      ]
+    },
+    {
+      "name": "Flipkart",
+      "totalReviews": 3145,
+      "adMentions": 64,
+      "adMentionRate": 2,
+      "avgRatingAll": 4.19,
+      "avgRatingWithAds": 1.17,
+      "avgRatingWithoutAds": 4.25,
+      "ratingDrop": 3.08,
+      "sentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 2645,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 370,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 130,
+          "fill": "#ef4444"
+        }
+      ],
+      "adSentimentDistribution": [
+        {
+          "name": "Positive",
+          "value": 22,
+          "fill": "#10b981"
+        },
+        {
+          "name": "Neutral",
+          "value": 11,
+          "fill": "#64748b"
+        },
+        {
+          "name": "Negative",
+          "value": 31,
+          "fill": "#ef4444"
+        }
+      ]
+    }
+  ]
+}
