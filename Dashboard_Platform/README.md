@@ -1,62 +1,101 @@
-# AdIntel Platform – Advertising Analytics Dashboard
+# 📊 AdIntel Platform – Advertising Analytics Dashboard
 
-## Project Overview
+## 📌 Project Overview
 
-AdIntel is a high-performance analytics dashboard designed to visualize advertisement fatigue metrics and predict user behavior using advanced ML models.
+AdIntel is a web-based dashboard designed to **visualize advertisement fatigue insights** and support basic prediction of user behavior.
 
-## Features
+It helps in understanding how advertisements impact user experience through **interactive charts and simple ML outputs**.
 
-* **Multi-Score AFI Predictor**: Predicts 4 core sentiment scores and the aggregate Ad Fatigue Index.
-* **Rating Risk Predictor**: Analyzes category and regional data to predict expected app ratings.
-* **Interactive Data Visualization**: Glassmorphism UI with real-time charting for sentiment and behavior.
-* **ML Insights**: Practical business recommendations based on predicted fatigue levels.
+---
 
-## 🌐 Production Deployment
-The dashboard is optimized for **Vercel** with the following configuration:
-- **Root Directory**: `Dashboard_Platform`
-- **Build Command**: `npm run build`
-- **Output Directory**: `dist`
-- **Environment Variable**: `VITE_API_BASE_URL` pointing to your live Railway backend.
+## 🚀 Features
 
-## Tech Stack
+* **AFI Predictor (Ad Fatigue Index)**
+  → Estimates user fatigue based on input behavior
 
-* **React + Vite**
-* **TypeScript**
-* **Tailwind CSS + Shadcn UI**
-* **Lucide Icons**
-* **Framer Motion** (Animations)
+* **Rating Risk Predictor**
+  → Predicts expected app rating based on category and region
 
-## Installation & Setup
+* **Interactive Visualizations**
+  → Displays trends in sentiment and ad-related behavior
+
+* **Insights Dashboard**
+  → Helps interpret patterns from analyzed data
+
+---
+
+## 🌐 Deployment
+
+This dashboard can be deployed using **Vercel**
+
+### Configuration
+
+* Root Directory: `Dashboard_Platform`
+* Build Command: `npm run build`
+* Output Directory: `dist`
+
+Environment variable:
+
+```
+VITE_API_BASE_URL=<backend_url>
+```
+
+---
+
+## 🛠️ Tech Stack
+
+* React + Vite
+* TypeScript
+* Tailwind CSS
+* Basic UI component libraries
+
+---
+
+## ⚙️ Installation & Setup
 
 ### 1. Install dependencies
+
 ```bash
 npm install
 ```
 
-### 2. Run the development server
+### 2. Run development server
+
 ```bash
 npm run dev
 ```
 
-The application will start on: `http://localhost:8080` (or `http://localhost:5173`)
-
-## Project Structure
+App runs on:
 
 ```
-Dashboard_Platform
-│
-├── src
-│   ├── components   # Reusable UI elements (Sidebar, AnimatedSections)
-│   ├── pages        # AFIPredictorPage, SecondaryPredictorPage, Dashboard
-│   ├── lib          # Utility functions
-│   └── index.css    # Global styles & Tailwind config
-│
-├── public
-├── package.json
-└── README.md
+http://localhost:5173
 ```
 
-## Contributors
+---
 
-* **Krishnan S.**
-* **Rachit Anand**
+## 📁 Project Structure
+
+```id="0x7jhh"
+Dashboard_Platform/
+ ├── src/
+ │   ├── components
+ │   ├── pages
+ │   ├── lib
+ │   └── styles
+ ├── public/
+ ├── package.json
+ └── README.md
+```
+
+---
+
+## 👨‍💻 Contributors
+
+* Krishnan S.
+* Rachit Anand
+
+---
+
+## 📌 Note
+
+This dashboard is part of a **Business Analytics project** focused on analyzing advertisement fatigue and improving user engagement strategies.
