@@ -65,7 +65,7 @@ export default function DemographicsPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis dataKey="name" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
                 <YAxis tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Bar dataKey="value" radius={[6, 6, 0, 0]}>
                   {ageData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                 </Bar>
@@ -79,7 +79,7 @@ export default function DemographicsPage() {
                 <Pie data={genderData} cx="50%" cy="50%" innerRadius={60} outerRadius={110} paddingAngle={4} dataKey="value" label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}>
                   {genderData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                 </Pie>
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
               </PieChart>
             </ResponsiveContainer>
           </ChartCard>
@@ -90,7 +90,7 @@ export default function DemographicsPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis dataKey="name" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
                 <YAxis tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Legend wrapperStyle={{ fontSize: 11, color: "hsl(220, 10%, 55%)" }} />
                 {phoneTypes.map((type, i) => (
                   <Bar key={type} dataKey={type} stackId="a" fill={COLORS[i % COLORS.length]} radius={i === phoneTypes.length - 1 ? [4, 4, 0, 0] : undefined} />
@@ -105,7 +105,7 @@ export default function DemographicsPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis dataKey="name" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
                 <YAxis domain={[0, 5]} tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Bar dataKey="value" radius={[6, 6, 0, 0]} fill="hsl(340, 80%, 60%)" />
               </BarChart>
             </ResponsiveContainer>
@@ -117,7 +117,7 @@ export default function DemographicsPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis type="number" domain={[0, 5]} tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
                 <YAxis dataKey="name" type="category" width={140} tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 11 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Bar dataKey="value" radius={[0, 6, 6, 0]} fill="hsl(35, 95%, 60%)" />
               </BarChart>
             </ResponsiveContainer>

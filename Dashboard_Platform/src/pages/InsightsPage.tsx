@@ -182,7 +182,7 @@ export default function InsightsPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis dataKey="name" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 11 }} angle={-15} textAnchor="end" height={60} />
                 <YAxis tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} unit="%" />
-                <Tooltip contentStyle={tooltipStyle} formatter={(value: number) => [`${value}%`, "Uninstall Rate"]} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} formatter={(value: number) => [`${value}%`, "Uninstall Rate"]} />
                 <Bar dataKey="rate" radius={[6, 6, 0, 0]}>
                   {retentionRisk.map((entry, i) => (
                     <Cell key={i} fill={entry.rate > 50 ? "hsl(0, 72%, 55%)" : entry.rate > 35 ? "hsl(35, 95%, 60%)" : "hsl(170, 75%, 50%)"} />
@@ -199,7 +199,7 @@ export default function InsightsPage() {
                 <XAxis dataKey="name" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 11 }} />
                 <YAxis yAxisId="left" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} unit="%" />
                 <YAxis yAxisId="right" orientation="right" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Legend wrapperStyle={{ fontSize: 11, color: "hsl(220, 10%, 55%)" }} />
                 <Bar yAxisId="right" dataKey="total" name="Total Users" fill="hsl(220, 15%, 25%)" radius={[4, 4, 0, 0]} />
                 <Line yAxisId="left" dataKey="payRate" name="Would Pay %" stroke="hsl(170, 75%, 50%)" strokeWidth={3} dot={{ fill: "hsl(170, 75%, 50%)", r: 5 }} />
@@ -213,7 +213,7 @@ export default function InsightsPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 15%, 18%)" />
                 <XAxis dataKey="name" tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
                 <YAxis domain={[0, 5]} tick={{ fill: "hsl(220, 10%, 55%)", fontSize: 12 }} />
-                <Tooltip contentStyle={tooltipStyle} />
+                <Tooltip itemStyle={{ color: '#4ade80', fontWeight: 600 }} labelStyle={{ color: '#4ade80', fontWeight: 'bold' }} contentStyle={tooltipStyle} />
                 <Legend wrapperStyle={{ fontSize: 11, color: "hsl(220, 10%, 55%)" }} />
                 <Area type="monotone" dataKey="interruption" name="Interruption" stackId="1" stroke="hsl(250, 85%, 65%)" fill="hsl(250, 85%, 65%)" fillOpacity={0.3} />
                 <Area type="monotone" dataKey="frustration" name="Frustration" stackId="2" stroke="hsl(340, 80%, 60%)" fill="hsl(340, 80%, 60%)" fillOpacity={0.3} />
