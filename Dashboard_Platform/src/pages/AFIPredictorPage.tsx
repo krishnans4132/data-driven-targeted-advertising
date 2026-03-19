@@ -30,7 +30,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 
-const BACKEND_URL = "http://localhost:8000";
+const BACKEND_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 
 interface AFIPrediction {
   ads_interrupt_usage_score: number;

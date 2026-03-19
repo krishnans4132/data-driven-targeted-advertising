@@ -37,7 +37,7 @@ function StarDisplay({ rating }: { rating: number }) {
   );
 }
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
+const BACKEND_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 
 export default function SecondaryPredictorPage() {
   const [predictions, setPredictions]   = useState<Prediction[]>([]);
