@@ -11,6 +11,13 @@ AdIntel is a high-performance analytics dashboard designed to visualize advertis
 * **Interactive Data Visualization**: Glassmorphism UI with real-time charting for sentiment and behavior.
 * **ML Insights**: Practical business recommendations based on predicted fatigue levels.
 
+## 🌐 Production Deployment
+The dashboard is optimized for **Vercel** with the following configuration:
+- **Root Directory**: `Dashboard_Platform`
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Environment Variable**: `VITE_API_BASE_URL` pointing to your live Railway backend.
+
 ## Tech Stack
 
 * **React + Vite**
