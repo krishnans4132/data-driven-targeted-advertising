@@ -20,7 +20,7 @@ def train_rating_model():
     global _model, _le_cat, _le_cont, _categories, _continents
 
     data_path = os.path.abspath(
-        os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'final', 'secondary_ads_dataset.csv')
+        os.path.join(os.path.dirname(__file__), '..', 'data', 'secondary_ads_dataset.csv')
     )
 
     if not os.path.exists(data_path):
