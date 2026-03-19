@@ -15,6 +15,12 @@ FastAPI backend mapping AdIntel ML Models for prediction, sentiment analysis, an
 
 *The server automatically trains its ML models on startup using the latest data in `/data/final/`.*
 
+## 🚀 Cloud Deployment (Railway)
+The backend is deployed to **Railway** with:
+- **Python Version**: 3.11 (via `runtime.txt`) for stable ML library support.
+- **Infrastructure**: Automated via `railway.json` and a standard FastAPI Procfile.
+- **Portability**: Training data is bundled in `backend/data/` for immediate startup in any environment.
+
 ---
 
 ## Architecture Breakdown
