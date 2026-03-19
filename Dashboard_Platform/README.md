@@ -1,81 +1,55 @@
-# Insight Navigator – Advertising Analytics Dashboard
+# AdIntel Platform – Advertising Analytics Dashboard
 
 ## Project Overview
 
-Insight Navigator is a web-based analytics dashboard built to analyze advertising data and generate actionable insights.
-The platform helps visualize key metrics such as customer behavior, campaign performance, and product trends using interactive charts.
+AdIntel is a high-performance analytics dashboard designed to visualize advertisement fatigue metrics and predict user behavior using advanced ML models.
 
 ## Features
 
-* Interactive data visualization
-* Advertising performance insights
-* Customer segmentation overview
-* Responsive dashboard UI
-* Real-time data rendering
+* **Multi-Score AFI Predictor**: Predicts 4 core sentiment scores and the aggregate Ad Fatigue Index.
+* **Rating Risk Predictor**: Analyzes category and regional data to predict expected app ratings.
+* **Interactive Data Visualization**: Glassmorphism UI with real-time charting for sentiment and behavior.
+* **ML Insights**: Practical business recommendations based on predicted fatigue levels.
 
 ## Tech Stack
 
-* React
-* TypeScript
-* Tailwind CSS
-* Vite
-* Charting libraries for data visualization
+* **React + Vite**
+* **TypeScript**
+* **Tailwind CSS + Shadcn UI**
+* **Lucide Icons**
+* **Framer Motion** (Animations)
 
 ## Installation & Setup
 
-### 1. Clone the repository
-
-```
-git clone <repository-url>
-```
-
-### 2. Navigate to the project folder
-
-```
-cd insight-navigator
-```
-
-### 3. Install dependencies
-
-```
+### 1. Install dependencies
+```bash
 npm install
 ```
 
-### 4. Run the development server
-
-```
+### 2. Run the development server
+```bash
 npm run dev
 ```
 
-The application will start on:
-
-```
-http://localhost:5173
-```
+The application will start on: `http://localhost:8080` (or `http://localhost:5173`)
 
 ## Project Structure
 
 ```
-insight-navigator
+Dashboard_Platform
 │
 ├── src
-│   ├── components
-│   ├── pages
-│   ├── charts
-│   └── utils
+│   ├── components   # Reusable UI elements (Sidebar, AnimatedSections)
+│   ├── pages        # AFIPredictorPage, SecondaryPredictorPage, Dashboard
+│   ├── lib          # Utility functions
+│   └── index.css    # Global styles & Tailwind config
 │
 ├── public
 ├── package.json
 └── README.md
 ```
 
-## Future Improvements
-
-* Add advanced filtering for campaigns
-* Integrate real-time data sources
-* Export analytics reports
-* Improve dashboard performance
-
 ## Contributors
 
-* Rachit Anand
+* **Krishnan S.**
+* **Rachit Anand**
