@@ -32,7 +32,7 @@ By combining **survey insights with text‑mined app review data**, the project 
 - Anonymous and structured responses
 - Mostly closed‑ended questions for quantitative analysis
 - Target responses: **1000**
-- Current responses: **422**
+- Final cleaned responses: **411**
 
 Form link:
 https://forms.gle/xwqqxnVzqaRNMo6Q9
@@ -143,6 +143,22 @@ The analysis includes visualizations such as:
 
 ---
 
+## 🚀 AdIntel Machine Learning Dashboard
+
+In addition to the static analysis, this repository includes a **production-ready ML suite** for real-time predictions:
+
+### 1. Multi-Score AFI Predictor (Primary Data)
+*   **Input**: User behavioral context (Screen time, Ad frequency, Format, Timing).
+*   **Output**: Predicts 4 specific sentiment scores (Interruption, Frustration, Enjoyment, Abandonment) and the aggregate Ad Fatigue Index.
+*   **Architecture**: High-precision `MultiOutputRegressor` trained on 411 survey responses.
+
+### 2. Rating Risk Predictor (Secondary Data)
+*   **Input**: App Category and Global Region.
+*   **Output**: Predicted app star rating (1.0 - 5.0).
+*   **Architecture**: `RandomForestRegressor` trained on 225k+ app reviews.
+
+---
+
 ## Key Insights
 
 - **Game and Entertainment** categories show the highest ad complaint frequency
@@ -215,4 +231,25 @@ requirements.txt
 
 **Krishnan S.**
 **Rachit Anand**
+
 Business Analytics Project — Amrita Vishwa Vidyapeetham, Coimbatore
+
+## Running Locally
+
+AdIntel uses a **Live Training Architecture**. The backend automatically trains its models on every startup using the latest data in `/data/final/`.
+
+### 1. Start Backend (FastAPI)
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+```
+*API docs available at `http://localhost:8000/docs`.*
+
+### 2. Start Frontend (React + Vite)
+```bash
+cd Dashboard_Platform
+npm install
+npm run dev
+```
+*Dashboard accessible at `http://localhost:8080` (or `http://localhost:5173`).*

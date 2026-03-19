@@ -9,7 +9,8 @@ import DemographicsPage from "@/pages/DemographicsPage";
 import AdAnalysisPage from "@/pages/AdAnalysisPage";
 import BehaviorPage from "@/pages/BehaviorPage";
 import InsightsPage from "@/pages/InsightsPage";
-import MLInsightsPage from "@/pages/MLInsightsPage";
+import SecondaryPredictorPage from "./pages/SecondaryPredictorPage";
+import AFIPredictorPage from "./pages/AFIPredictorPage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -27,7 +28,8 @@ const App = () => (
             <Route path="/ad-analysis" element={<AdAnalysisPage />} />
             <Route path="/behavior" element={<BehaviorPage />} />
             <Route path="/insights" element={<InsightsPage />} />
-            <Route path="/ml-insights" element={<MLInsightsPage />} />
+            <Route path="/secondary/predictor" element={<SecondaryPredictorPage />} />
+            <Route path="/afi-predictor" element={<AFIPredictorPage />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
