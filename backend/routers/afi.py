@@ -30,8 +30,8 @@ class AFIPredictionInput(BaseModel):
 def train_afi_model():
     global afi_model, valid_options
     
-    # Path to primary dataset
-    dataset_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../data/final/primary_dataset.csv'))
+    # Path to primary dataset (now located inside backend/data for portability)
+    dataset_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/primary_dataset.csv'))
     
     if not os.path.exists(dataset_path):
         print(f"Error: Dataset not found at {dataset_path}")
