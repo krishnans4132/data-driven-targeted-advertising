@@ -231,6 +231,7 @@ requirements.txt
 
 **Krishnan S.**
 **Rachit Anand**
+**Abishek R**
 
 Business Analytics Project — Amrita Vishwa Vidyapeetham, Coimbatore
 
