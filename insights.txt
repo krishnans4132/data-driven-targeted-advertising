@@ -1,0 +1,14 @@
+--- Raw Survey (primary_dataset.csv) ---
+Shape: (411, 23)
+
+--- Raw Secondary (secondary_ads_dataset.csv) ---
+Shape: (225261, 2)
+Ad Mentions: 39723 (17.6%)
+
+--- Dashboard Processed Secondary (dashboard_dataset.csv) ---
+Shape: (225261, 7)
+Mean Rating without Ads: 3.91
+Mean Rating with Ads: 2.35
+
+--- Dashboard Processed Survey (dashboard_dataset_survey.csv) ---
+Shape: (411, 23)

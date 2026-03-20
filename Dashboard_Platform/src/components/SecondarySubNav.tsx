@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, Compass, Trophy, Brain } from "lucide-react";
+import { LayoutDashboard, Compass, Trophy, Brain, Lightbulb } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const secondaryNavItems = [
   { title: "Overview & Sentiment", url: "/secondary", icon: LayoutDashboard },
   { title: "Category Insights", url: "/secondary/insights", icon: Compass },
+  { title: "Business Insights", url: "/secondary/business-insights", icon: Lightbulb },
   { title: "App Leaderboard", url: "/secondary/apps", icon: Trophy },
   { title: "Rating Predictor", url: "/secondary/predictor", icon: Brain },
 ];

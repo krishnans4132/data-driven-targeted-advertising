@@ -16,6 +16,7 @@ import SurveyLayout from "@/components/SurveyLayout";
 import SecondaryLayout from "@/components/SecondaryLayout";
 import SecondaryOverviewPage from "@/pages/SecondaryOverviewPage";
 import SecondaryInsightsPage from "@/pages/SecondaryInsightsPage";
+import SecondaryBusinessInsightsPage from "@/pages/SecondaryBusinessInsightsPage";
 import SecondaryAppsPage from "@/pages/SecondaryAppsPage";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -33,6 +34,7 @@ const App = () => (
             <Route element={<SecondaryLayout />}>
               <Route path="/secondary" element={<SecondaryOverviewPage />} />
               <Route path="/secondary/insights" element={<SecondaryInsightsPage />} />
+              <Route path="/secondary/business-insights" element={<SecondaryBusinessInsightsPage />} />
               <Route path="/secondary/apps" element={<SecondaryAppsPage />} />
               <Route path="/secondary/predictor" element={<SecondaryPredictorPage />} />
             </Route>
