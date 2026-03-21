@@ -227,30 +227,80 @@ requirements.txt
 
 ---
 
-## 📎 Authors
+## Prerequisites
 
-**Krishnan S.**
-**Rachit Anand**
-**Abishek R**
+Before running the projects locally, ensure your system meets the following requirements:
 
-Business Analytics Project — Amrita Vishwa Vidyapeetham, Coimbatore
+### General Requirements
+- **Git** (for cloning the repository)
+
+### Backend Requirements
+- **Python 3.8+**
+- **pip** (Python package installer)
+- *(Optional but recommended)* **virtualenv** or **conda** for managing Python environments.
+
+### Frontend Requirements (Dashboard Platform)
+- **Node.js** (v18.0.0 or higher recommended)
+- **npm** (comes with Node.js) or **Bun** (as `bun.lock` is present in the repository)
+
+### Data Science / Notebook Requirements
+- **Jupyter Notebook** or **JupyterLab** (to run the `.ipynb` files in the `notebook/` directory)
+
+---
 
 ## Running Locally
 
 AdIntel uses a **Live Training Architecture**. The backend automatically trains its models on every startup using the latest data in `/data/final/`.
 
-### 1. Start Backend (FastAPI)
+### 1. Start the Backend (FastAPI)
+
+It is highly recommended to run the backend within a Python virtual environment to avoid dependency conflicts.
+
 ```bash
+# 1. Navigate to the backend directory
 cd backend
+
+# 2. Create and activate a virtual environment (Optional but Recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+# 3. Install the required dependencies
 pip install -r requirements.txt
+
+# 4. Start the FastAPI server
 uvicorn main:app --reload --port 8000
 ```
-*API docs available at `http://localhost:8000/docs`.*
+*The backend API will be running at `http://localhost:8000`.*
+*Interactive API documentation is available at `http://localhost:8000/docs`.*
 
-### 2. Start Frontend (React + Vite)
+### 2. Start the Frontend (Dashboard Platform)
+
+The frontend interacts with the backend API. Ensure the backend is running before launching the frontend.
+
 ```bash
+# 1. Navigate to the frontend directory
 cd Dashboard_Platform
-npm install
+
+# 2. Set up environment variables
+# Create a .env.local file based on .env.example if necessary
+# Ensure VITE_API_BASE_URL is pointed to your backend (e.g., http://localhost:8000)
+
+# 3. Install Node.js dependencies
+npm install  # Or use `bun install` if using Bun
+
+# 4. Start the Vite development server
 npm run dev
 ```
-*Dashboard accessible at `http://localhost:8080` (or `http://localhost:5173`).*
+*The interactive dashboard will be accessible at `http://localhost:5173` (or `http://localhost:8080` depending on port availability).*
+
+---
+
+## 📎 Authors
+
+**Krishnan S.**
+**Rachit Anand**
+**Abishek R**
+**Vijayaragunathan R**
+**A GOWSHIK**
+
+Business Analytics Project — Amrita Vishwa Vidyapeetham, Coimbatore
